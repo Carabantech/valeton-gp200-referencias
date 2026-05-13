@@ -25,6 +25,8 @@ export function ValetonApp({ content }: ValetonAppProps) {
   const [activeTab, setActiveTab] = useState(defaultTab);
   const [searchTerm, setSearchTerm] = useState("");
   const [activeNeed, setActiveNeed] = useState<string | null>(null);
+  const [showProjectNotice, setShowProjectNotice] = useState(true);
+  const [showQrModal, setShowQrModal] = useState(false);
   const normalizedSearch = searchTerm.trim().toLowerCase();
   const isFiltering = normalizedSearch.length > 0 || Boolean(activeNeed);
 
@@ -58,6 +60,16 @@ export function ValetonApp({ content }: ValetonAppProps) {
 
   return (
     <div className="container">
+      {showProjectNotice ? (
+        <ProjectNotice
+          locale={content.locale}
+          onClose={() => setShowProjectNotice(false)}
+          onOpenQr={() => setShowQrModal(true)}
+        />
+      ) : null}
+
+      {showQrModal ? <QrModal locale={content.locale} onClose={() => setShowQrModal(false)} /> : null}
+
       <Hero
         content={content}
         searchTerm={searchTerm}
@@ -120,9 +132,9 @@ export function ValetonApp({ content }: ValetonAppProps) {
           );
         })}
 
-      <DonationSection locale={content.locale} />
+      <DonationSection locale={content.locale} onOpenQr={() => setShowQrModal(true)} />
 
-      <div className="footer" dangerouslySetInnerHTML={{ __html: content.footer }} />
+      <Footer locale={content.locale} footerHtml={content.footer} />
     </div>
   );
 }
@@ -330,7 +342,73 @@ function GuideSection({
   );
 }
 
-function DonationSection({ locale }: { locale: ValetonContent["locale"] }) {
+function ProjectNotice({
+  locale,
+  onClose,
+  onOpenQr,
+}: {
+  locale: ValetonContent["locale"];
+  onClose: () => void;
+  onOpenQr: () => void;
+}) {
+  const isSpanish = locale === "es";
+
+  return (
+    <div className="notice-backdrop" role="dialog" aria-modal="true" aria-labelledby="project-notice-title">
+      <div className="notice-card">
+        <div className="notice-copy">
+          <p>{isSpanish ? "Proyecto independiente" : "Independent project"}</p>
+          <h2 id="project-notice-title">
+            {isSpanish ? "Manual online sin fines comerciales" : "Non-commercial online manual"}
+          </h2>
+          <span>
+            {isSpanish
+              ? "Este sitio es una referencia personal y comunitaria para usuarios de la Valeton GP-200. No es un producto oficial ni busca vender contenido; la idea es mantener una guia clara, practica y facil de actualizar."
+              : "This site is a personal and community reference for Valeton GP-200 users. It is not an official product and does not sell content; the goal is to keep a clear, practical, and easy-to-update guide."}
+          </span>
+          <span>
+            {isSpanish
+              ? "Si el proyecto te resulta util y queres apoyar futuras mejoras, podes colaborar con una donacion por Cafecito o cripto por QR."
+              : "If the project is useful and you want to support future improvements, you can donate through Cafecito or crypto by QR."}
+          </span>
+        </div>
+
+        <div className="notice-actions">
+          <a href="https://cafecito.app/carabantech" rel="noopener" target="_blank" className="cafecito-link">
+            <img
+              srcSet="https://cdn.cafecito.app/imgs/buttons/button_6.png 1x, https://cdn.cafecito.app/imgs/buttons/button_6_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_6_3.75x.png 3.75x"
+              src="https://cdn.cafecito.app/imgs/buttons/button_6.png"
+              alt={isSpanish ? "Invitame un cafe en cafecito.app" : "Buy me a coffee on cafecito.app"}
+            />
+          </a>
+          <button type="button" className="crypto-donation crypto-button" onClick={onOpenQr}>
+            <img src="/img/qr-bitso.jpeg" alt="" aria-hidden="true" />
+            <span>{isSpanish ? "Ver QR cripto" : "View crypto QR"}</span>
+          </button>
+        </div>
+
+        <button type="button" className="notice-close" onClick={onClose}>
+          {isSpanish ? "Entrar al manual" : "Enter manual"}
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function QrModal({ locale, onClose }: { locale: ValetonContent["locale"]; onClose: () => void }) {
+  const isSpanish = locale === "es";
+
+  return (
+    <div className="qr-backdrop" role="dialog" aria-modal="true" aria-label={isSpanish ? "QR cripto" : "Crypto QR"}>
+      <button type="button" className="qr-modal-card" onClick={onClose}>
+        <img src="/img/qr-bitso.jpeg" alt={isSpanish ? "QR para donacion cripto" : "Crypto donation QR"} />
+        <span>{isSpanish ? "Click para cerrar" : "Click to close"}</span>
+      </button>
+    </div>
+  );
+}
+
+function DonationSection({ locale, onOpenQr }: { locale: ValetonContent["locale"]; onOpenQr: () => void }) {
   const isSpanish = locale === "es";
 
   return (
@@ -354,22 +432,25 @@ function DonationSection({ locale }: { locale: ValetonContent["locale"] }) {
           />
         </a>
 
-        <div className="crypto-donation">
-          <img src="/img/qr-bitso.jpeg" alt={isSpanish ? "QR para donacion cripto" : "Crypto donation QR"} />
+        <button type="button" className="crypto-donation crypto-button" onClick={onOpenQr}>
+          <img src="/img/qr-bitso.jpeg" alt="" aria-hidden="true" />
           <span>{isSpanish ? "Cripto por QR" : "Crypto by QR"}</span>
-        </div>
-
-        <a
-          href="https://portfoliocarabantech.netlify.app/"
-          rel="noopener"
-          target="_blank"
-          className="profile-link"
-        >
-          <span>{isSpanish ? "Ver perfil" : "View profile"}</span>
-          <strong>Carabantech</strong>
-        </a>
+        </button>
       </div>
     </section>
+  );
+}
+
+function Footer({ locale, footerHtml }: { locale: ValetonContent["locale"]; footerHtml: string }) {
+  const isSpanish = locale === "es";
+
+  return (
+    <footer className="footer">
+      <div dangerouslySetInnerHTML={{ __html: footerHtml }} />
+      <a href="https://portfoliocarabantech.netlify.app/" rel="noopener" target="_blank" className="footer-profile-link">
+        {isSpanish ? "Ver perfil de Carabantech" : "View Carabantech profile"}
+      </a>
+    </footer>
   );
 }
 
