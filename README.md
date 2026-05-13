@@ -14,6 +14,7 @@ El proyecto esta construido con Next.js y organiza el contenido en tarjetas por 
 - Cadena sugerida de referencia: `PRE -> WAH -> DST -> AMP -> NR -> CAB -> EQ -> MOD -> DLY -> RVB -> VOL`.
 - Guias para configuraciones globales, salida a consola, USB audio/reamp, EXP/CTRL, looper, drum machine y tips de vivo.
 - Favicon propio del sitio.
+- Soporte PWA: manifest, iconos instalables y service worker para uso offline basico.
 
 ## Objetivo
 
@@ -73,6 +74,17 @@ Compilar para produccion:
 ```bash
 npm run build
 ```
+
+## PWA
+
+El sitio incluye soporte PWA para que pueda instalarse desde el navegador en escritorio o mobile.
+
+Archivos principales:
+
+- `public/manifest.webmanifest`: nombre, iconos, color de tema y accesos directos.
+- `public/sw.js`: cache basico del shell de la app y navegacion offline.
+- `public/icons/`: iconos PNG de 192 y 512 px.
+- `components/PwaRegister.tsx`: registro del service worker en el cliente.
 
 ## Como Agregar Un Nuevo Efecto
 
