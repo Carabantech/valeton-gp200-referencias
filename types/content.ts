@@ -22,6 +22,11 @@ export type Effect = {
   paramsHtml: string;
   type: string;
   searchText: string;
+  musicalTags?: string[];
+  recommendedUse?: string;
+  inspiration?: string;
+  suggestedPosition?: string;
+  needTags?: string[];
 };
 
 export type ValetonContent = {

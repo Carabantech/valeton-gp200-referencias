@@ -60,6 +60,11 @@
       "icon": "/img/icon_RVB.png"
     },
     {
+      "id": "vol",
+      "label": "VOL",
+      "iconText": "VOL"
+    },
+    {
       "id": "view",
       "label": "GUÍAS",
       "iconText": "📖"
@@ -83,6 +88,18 @@
       "title": "Cómo cargar Perfiles de Neural Amp Modeler (NAM) en la Valeton GP-200",
       "description": "Para cargar perfiles de Neural Amp Modeler (NAM) en tu Valeton GP-200, necesitas tener instalado el firmware versión 1.7.4 o superior. El software oficial de Valeton se encarga de convertir automáticamente los archivos .nam al formato interno de la pedalera (SnapTone).",
       "bodyHtml": "<strong>1. Preparación Obligatoria</strong><br><br>\r\n      <ul style=\"margin-left:18px;\">\r\n        <li><strong>Actualiza todo:</strong> Asegúrate de que el firmware de tu GP-200 y el software del ordenador (GP-200 Control) estén en su versión más reciente (firmware 1.7.4 o superior). Si no coinciden las versiones, la opción de NAM no aparecerá.</li>\r\n        <li><strong>Descarga tus perfiles:</strong> Consigue tus archivos .nam desde plataformas comunitarias como <a href=\"https://www.tonehunt.org/\" target=\"_blank\" style=\"color:#38bdf8;\">ToneHunt</a> o repositorios similares.</li>\r\n      </ul>\r\n      <br>\r\n      <strong>2. Pasos para Importar los Archivos NAM</strong><br><br>\r\n      <ol style=\"margin-left:18px;\">\r\n        <li><strong>Conexión:</strong> Conecta la pedalera a tu PC/Mac vía USB y abre el programa GP-200 Control.</li>\r\n        <li><strong>Selecciona el Bloque de Destino:</strong> Los archivos NAM se pueden cargar en dos lugares diferentes según lo que emulen:\r\n          <ul style=\"margin-left:18px;margin-top:8px;\">\r\n            <li><strong>Bloque AMP:</strong> Si es una captura de un amplificador (cabezal o combo).</li>\r\n            <li><strong>Bloque DIST (Efectos):</strong> Si es una captura de un pedal de overdrive o distorsión.</li>\r\n          </ul>\r\n        </li>\r\n        <li><strong>Busca los Slots Vacíos:</strong> Haz clic en el nombre del amplificador o pedal actual para abrir la lista desplegable. Baja hasta el final de la lista hasta encontrar la sección etiquetada como \"SnapTone\" o \"NAM\".</li>\r\n        <li><strong>Importar:</strong> Haz clic derecho sobre una ranura vacía (User Slot) y selecciona la opción \"Import NAM file\" (o haz clic en el icono de la carpeta).</li>\r\n        <li><strong>Conversión:</strong> Selecciona el archivo .nam en tu ordenador. El software tardará unos 20 segundos en procesar y convertir el archivo al formato de la pedalera.</li>\r\n        <li><strong>Guardar:</strong> Recuerda presionar \"Save\" en la esquina superior derecha del programa para almacenar el preset.</li>\r\n      </ol>\r\n      <br>\r\n      <strong>3. Consideraciones y Errores Comunes</strong><br><br>\r\n      <ul style=\"margin-left:18px;\">\r\n        <li><strong>Error \"Incorrect File Type\":</strong> Este error ocurre si intentas cargar un archivo .nam dentro de la sección de respuestas de impulso (IR) o de presets generales. Asegúrate de estar dentro de la lista de modelos de los bloques AMP o DIST.</li>\r\n        <li><strong>Añade un bloque CAB / IR:</strong> La mayoría de las capturas NAM de internet son \"Amp Only\" (solo el cabezal). Para que suene bien y no sea estridente, debes activar obligatoriamente el bloque CAB o colocar un IR justo después del bloque AMP en tu cadena de efectos.</li>\r\n        <li><strong>El programa se congela al convertir:</strong> Si el software se traba al procesar el archivo NAM, cierra el programa, haz clic derecho sobre el icono de GP-200 Control en tu computadora y selecciona \"Ejecutar como Administrador\".</li>\r\n      </ul>\r\n      <br>\r\n      <div style=\"margin-top:18px;\">\r\n        <strong>Referencia en video:</strong><br>\r\n        <a href=\"https://www.youtube.com/watch?v=bivNdzD0QpM\" target=\"_blank\" style=\"color:#38bdf8;font-weight:bold;\">Ver tutorial en YouTube - GP-200 Firmware 1.7.4 Update & Neural Amp Modeler</a>\r\n      </div>"
+    },
+    {
+      "category": "Configuraciones globales",
+      "title": "Funciones globales y utilidades de la GP-200",
+      "description": "Accesos de referencia para ajustes que afectan el flujo completo del equipo, asignaciones de control y herramientas fuera de la cadena principal de efectos.",
+      "bodyHtml": "<ul>\n  <li><strong>VOL:</strong> Control de volumen general o por posicion dentro de la cadena.</li>\n  <li><strong>Global EQ:</strong> Ecualizacion global para adaptar la salida al equipo, sala o sistema FRFR.</li>\n  <li><strong>Auto CAB Match:</strong> Vincula automaticamente el gabinete recomendado al cambiar de amplificador.</li>\n  <li><strong>No CAB Mode:</strong> Desactiva la simulacion de gabinete en salidas especificas para usar amplis reales, retornos o etapas externas.</li>\n  <li><strong>EXP/CTRL assignments:</strong> Asignaciones para pedal de expresion y footswitches de control.</li>\n  <li><strong>USB audio / reamp:</strong> Grabacion, monitoreo y reamplificacion via USB.</li>\n  <li><strong>Looper / drum machine:</strong> Herramientas para practica, ideas rapidas y construccion de grooves.</li>\n</ul>"
+    },
+    {
+      "category": "Guia de vivo y estudio",
+      "title": "Tags, ruteo y gig-savers para worship, PA y Reaper",
+      "description": "Checklist practico para organizar presets, salir directo a consola, grabar por USB y evitar problemas comunes en vivo.",
+      "bodyHtml": "<strong>Tags por estilo</strong><br><br>\n<ul>\n  <li><strong>#Worship-Ambient:</strong> Limpios comprimidos, delays con puntos y reverbs masivas para tonos tipo Phil Wickham o Evan Craft.</li>\n  <li><strong>#EdgeOfBreakup:</strong> Sonido casi limpio que rompe al tocar fuerte. Ideal con Matchless-style, Klon-style y amps boutique.</li>\n  <li><strong>#Praise-Rock:</strong> Drives cargados, medios definidos y solos con sustain.</li>\n  <li><strong>#Direct-to-PA:</strong> Presets pensados para salida XLR directa a consola.</li>\n  <li><strong>#Studio-Link:</strong> Configuraciones para DAW, Reaper, USB y NAM.</li>\n</ul>\n<br>\n<strong>Configuracion global y ruteo</strong><br><br>\n<ol>\n  <li><strong>Input Level:</strong> Para Parker y Strato, partir en 0dB. Con Gibson Les Paul o humbuckers fuertes, probar -3dB para evitar clipping con NAM.</li>\n  <li><strong>Output Mode:</strong> Para auditorio, usar XLR en LINE salvo que el tecnico pida otra cosa.</li>\n  <li><strong>Global EQ:</strong> Dejarlo ON. Si el auditorio retumba, probar Low Cut global en 120Hz. Si suena chillon, bajar alrededor de 5kHz unos -3dB.</li>\n  <li><strong>Signal Chain:</strong> NR suave -> PRE drives -> AMP/NAM -> CAB/IR -> FX LOOP -> DLY/RVB. Si usas una reverb externa tipo Hotone Verbera en loop, probar el FX LOOP despues del CAB para sonido post-produccion.</li>\n</ol>\n<br>\n<strong>USB, Reaper y reamp</strong><br><br>\n<ul>\n  <li><strong>USB Mode:</strong> Usar Stereo como punto de partida.</li>\n  <li><strong>Rec Level:</strong> Revisar que Reaper no llegue al rojo.</li>\n  <li><strong>Dry/Wet:</strong> Si es posible, grabar una pista con efectos y otra DI limpia para reamplificar o usar NAM luego.</li>\n</ul>\n<br>\n<strong>EXP / CTRL para escenario</strong><br><br>\n<ul>\n  <li><strong>EXP 1:</strong> Mapearlo al Mix de la reverb o al Mix del FX Loop para pasar de seco a ambiente en puentes o finales.</li>\n  <li><strong>Modo SCENE:</strong> Mas seguro en vivo: FS1 verso limpio, FS2 coro crunch, FS3 solo/puente con lead + delay.</li>\n</ul>\n<br>\n<strong>Gig-savers</strong><br><br>\n<ul>\n  <li><strong>Ground Lift:</strong> Si aparece zumbido al conectar XLR a consola, probar el switch fisico GND/LIFT de la parte trasera.</li>\n  <li><strong>Safe Gain:</strong> Igualar volumen de preset con volumen de bypass para evitar picos si algo falla.</li>\n  <li><strong>SnapTone Loading:</strong> Al importar NAM, usar nombres de archivo cortos para reducir errores en la Valeton Suite.</li>\n</ul>"
     }
   ],
   "sections": {
@@ -94,7 +111,19 @@
         "descriptionHtml": "Basado en el legendario compresor Ross™. Este es el origen del efecto de compresión en guitarra. Revolucionó la forma de tocar al público y se convirtió en un elemento esencial de la guitarra moderna. Ofrece una compresión muy natural y suave.",
         "paramsHtml": "<strong>Sustain:</strong> Controla la cantidad de compresión<br>\r\n<strong>Volume:</strong> Controla el nivel de salida del efecto",
         "type": "Type: Comp",
-        "searchText": "COMP Basado en el legendario compresor Ross™. Este es el origen del efecto de compresión en guitarra. Revolucionó la forma de tocar al público y se convirtió en un elemento esencial de la guitarra moderna. Ofrece una compresión muy natural y suave. Sustain: Controla la cantidad de compresión Volume: Controla el nivel de salida del efecto Type: Comp"
+        "searchText": "COMP Basado en el legendario compresor Ross™. Este es el origen del efecto de compresión en guitarra. Revolucionó la forma de tocar al público y se convirtió en un elemento esencial de la guitarra moderna. Ofrece una compresión muy natural y suave. Sustain: Controla la cantidad de compresión Volume: Controla el nivel de salida del efecto Type: Comp",
+        "musicalTags": [
+          "Clean",
+          "Funk",
+          "Control"
+        ],
+        "recommendedUse": "Muy util para emparejar limpios, partes funk y picking tipo country.",
+        "inspiration": "Ross compressor style",
+        "suggestedPosition": "Inicio de cadena",
+        "needTags": [
+          "clean",
+          "rhythm"
+        ]
       },
       {
         "name": "COMP4",
@@ -184,7 +213,20 @@
         "descriptionHtml": "El Ibanez® Tube Screamer® es sinónimo del tono de overdrive transparente utilizado por muchos de los mejores guitarristas de hoy. El pedal TS9 amplifica la señal de la guitarra lo suficiente para manejar la etapa de preamp de tu amplificador, ofreciendo un overdrive naturalmente sobrante y puro con un crunch de ritmo nítido.",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de overdrive<br>\r\n<strong>Tone:</strong> Controla el carácter tonal del efecto<br>\r\n<strong>Volume:</strong> Controla el nivel de salida del efecto",
         "type": "Type: OD",
-        "searchText": "OD 9 El Ibanez® Tube Screamer® es sinónimo del tono de overdrive transparente utilizado por muchos de los mejores guitarristas de hoy. El pedal TS9 amplifica la señal de la guitarra lo suficiente para manejar la etapa de preamp de tu amplificador, ofreciendo un overdrive naturalmente sobrante y puro con un crunch de ritmo nítido. Gain: Controla la cantidad de overdrive Tone: Controla el carácter tonal del efecto Volume: Controla el nivel de salida del efecto Type: OD"
+        "searchText": "OD 9 El Ibanez® Tube Screamer® es sinónimo del tono de overdrive transparente utilizado por muchos de los mejores guitarristas de hoy. El pedal TS9 amplifica la señal de la guitarra lo suficiente para manejar la etapa de preamp de tu amplificador, ofreciendo un overdrive naturalmente sobrante y puro con un crunch de ritmo nítido. Gain: Controla la cantidad de overdrive Tone: Controla el carácter tonal del efecto Volume: Controla el nivel de salida del efecto Type: OD",
+        "musicalTags": [
+          "Blues",
+          "Lead",
+          "Rhythm"
+        ],
+        "recommendedUse": "Ideal para empujar un ampli apenas cruncheado sin perder ataque de pua.",
+        "inspiration": "Tube Screamer style",
+        "suggestedPosition": "Antes del AMP",
+        "needTags": [
+          "blues",
+          "lead",
+          "rhythm"
+        ]
       },
       {
         "name": "Yellow OD",
@@ -202,7 +244,20 @@
         "descriptionHtml": "Basado en la legendaria Klon® Centaur, este modelo de overdrive te da una auténtica sensación de amplificador en una caja con un carácter sonoro pleno y rico que no es nada áspero ni burdo. Gira el knob de Gain al mínimo y obtendrás un excelente boost limpio.",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de ganancia<br>\r\n<strong>Tone:</strong> Controla el carácter tonal del efecto<br>\r\n<strong>Volume:</strong> Controla el nivel de salida del efecto",
         "type": "Type: OD",
-        "searchText": "Penesas Basado en la legendaria Klon® Centaur, este modelo de overdrive te da una auténtica sensación de amplificador en una caja con un carácter sonoro pleno y rico que no es nada áspero ni burdo. Gira el knob de Gain al mínimo y obtendrás un excelente boost limpio. Gain: Controla la cantidad de ganancia Tone: Controla el carácter tonal del efecto Volume: Controla el nivel de salida del efecto Type: OD"
+        "searchText": "Penesas Basado en la legendaria Klon® Centaur, este modelo de overdrive te da una auténtica sensación de amplificador en una caja con un carácter sonoro pleno y rico que no es nada áspero ni burdo. Gira el knob de Gain al mínimo y obtendrás un excelente boost limpio. Gain: Controla la cantidad de ganancia Tone: Controla el carácter tonal del efecto Volume: Controla el nivel de salida del efecto Type: OD",
+        "musicalTags": [
+          "Blues",
+          "Clean boost",
+          "Lead"
+        ],
+        "recommendedUse": "Empuje transparente para clean boost, leads al borde del breakup y engordar single coils.",
+        "inspiration": "Klon Centaur style",
+        "suggestedPosition": "Antes del AMP",
+        "needTags": [
+          "blues",
+          "lead",
+          "clean"
+        ]
       },
       {
         "name": "Super OD",
@@ -238,7 +293,20 @@
         "descriptionHtml": "Simulador de guitarra acústica diseñado para guitarras. Su prototipo proviene de un clásico pedal analógico de guitarra acústica.",
         "paramsHtml": "<strong>Body:</strong>  Controls the “body resonance” (low frequency response)<br>\r\n<strong>Top:</strong> Controls the upper harmonics (high frequency response)<br>\r\n<strong>Volume:</strong> Controla el nivel de salida del efecto level<br>\r\n<strong>Mode:</strong> Selects from 4 different sound characters! Standard: Simulates the tonal characteristics of a standard acoustic guitar. Jumbo: Simulates the tonal characteristics of a jumbo acoustic guitar. Enhanced: Simulates the tonal characteristics of an acoustic guitar with enhanced attack. Piezo: Simulates the sound of a piezo pickup",
         "type": "Type: Acoustic",
-        "searchText": "AC Sim Simulador de guitarra acústica diseñado para guitarras. Su prototipo proviene de un clásico pedal analógico de guitarra acústica. Body: Controls the “body resonance” (low frequency response) Top: Controls the upper harmonics (high frequency response) Volume: Controla el nivel de salida del efecto level Mode: Selects from 4 different sound characters! Standard: Simulates the tonal characteristics of a standard acoustic guitar. Jumbo: Simulates the tonal characteristics of a jumbo acoustic guitar. Enhanced: Simulates the tonal characteristics of an acoustic guitar with enhanced attack. Piezo: Simulates the sound of a piezo pickup Type: Acoustic"
+        "searchText": "AC Sim Simulador de guitarra acústica diseñado para guitarras. Su prototipo proviene de un clásico pedal analógico de guitarra acústica. Body: Controls the “body resonance” (low frequency response) Top: Controls the upper harmonics (high frequency response) Volume: Controla el nivel de salida del efecto level Mode: Selects from 4 different sound characters! Standard: Simulates the tonal characteristics of a standard acoustic guitar. Jumbo: Simulates the tonal characteristics of a jumbo acoustic guitar. Enhanced: Simulates the tonal characteristics of an acoustic guitar with enhanced attack. Piezo: Simulates the sound of a piezo pickup Type: Acoustic",
+        "musicalTags": [
+          "Acustico",
+          "Rhythm",
+          "Clean"
+        ],
+        "recommendedUse": "Sirve cuando necesitas una parte acustica usando una guitarra electrica.",
+        "inspiration": "Acoustic simulator style",
+        "suggestedPosition": "Antes del AMP o directo",
+        "needTags": [
+          "acoustic",
+          "rhythm",
+          "clean"
+        ]
       },
       {
         "name": "T-Wah",
@@ -431,7 +499,20 @@
         "descriptionHtml": "Basado en el legendario pedal Ibanez® TS-808 Tube Screamer® de overdrive. Desde que fue presentado en 1979, el TS808 ha abierto un nuevo mundo. Hay innumerables guitarristas que lo aman. Es un efecto de overdrive cálido y delicado. Puede usarse como overdrive o como Boost, se puede usar en una variedad de estilos musicales.\r\n    Usuarios famosos: Stevie Ray Vaughan, Joe Satriani, Paul Gilbert, Andy Timmons, Kirk Hammett, Michal Landau, U2",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de overdrive<br>\r\n<strong>Tone:</strong> Controla el sonido del efecto<br>\r\n<strong>Volume:</strong> Controla el nivel de salida del efecto",
         "type": "Type: OD",
-        "searchText": "Green OD Basado en el legendario pedal Ibanez® TS-808 Tube Screamer® de overdrive. Desde que fue presentado en 1979, el TS808 ha abierto un nuevo mundo. Hay innumerables guitarristas que lo aman. Es un efecto de overdrive cálido y delicado. Puede usarse como overdrive o como Boost, se puede usar en una variedad de estilos musicales. Usuarios famosos: Stevie Ray Vaughan, Joe Satriani, Paul Gilbert, Andy Timmons, Kirk Hammett, Michal Landau, U2 Gain: Controla la cantidad de overdrive Tone: Controla el sonido del efecto Volume: Controla el nivel de salida del efecto Type: OD"
+        "searchText": "Green OD Basado en el legendario pedal Ibanez® TS-808 Tube Screamer® de overdrive. Desde que fue presentado en 1979, el TS808 ha abierto un nuevo mundo. Hay innumerables guitarristas que lo aman. Es un efecto de overdrive cálido y delicado. Puede usarse como overdrive o como Boost, se puede usar en una variedad de estilos musicales. Usuarios famosos: Stevie Ray Vaughan, Joe Satriani, Paul Gilbert, Andy Timmons, Kirk Hammett, Michal Landau, U2 Gain: Controla la cantidad de overdrive Tone: Controla el sonido del efecto Volume: Controla el nivel de salida del efecto Type: OD",
+        "musicalTags": [
+          "Blues",
+          "Lead",
+          "Mid boost"
+        ],
+        "recommendedUse": "Boost clasico de medios para ajustar graves y empujar leads blues o rock.",
+        "inspiration": "Ibanez TS808 Tube Screamer style",
+        "suggestedPosition": "Antes del AMP",
+        "needTags": [
+          "blues",
+          "lead",
+          "rhythm"
+        ]
       },
       {
         "name": "OD 9",
@@ -440,7 +521,20 @@
         "descriptionHtml": "El Ibanez® Tube Screamer® es sinónimo del tono de overdrive transparente utilizado por muchos de los mejores guitarristas actuales. El pedal TS9 amplifica la señal de guitarra lo suficiente para impulsar la etapa de preamplificador de tu amplificador, ofreciendo un overdrive naturalmente sobrante y puro con un crunch de ritmo nítido.",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de overdrive<br>\r\n<strong>Tone:</strong> Controla el sonido del efecto<br>\r\n<strong>Volume:</strong> Controla el nivel de salida del efecto",
         "type": "Type: OD",
-        "searchText": "OD 9 El Ibanez® Tube Screamer® es sinónimo del tono de overdrive transparente utilizado por muchos de los mejores guitarristas actuales. El pedal TS9 amplifica la señal de guitarra lo suficiente para impulsar la etapa de preamplificador de tu amplificador, ofreciendo un overdrive naturalmente sobrante y puro con un crunch de ritmo nítido. Gain: Controla la cantidad de overdrive Tone: Controla el sonido del efecto Volume: Controla el nivel de salida del efecto Type: OD"
+        "searchText": "OD 9 El Ibanez® Tube Screamer® es sinónimo del tono de overdrive transparente utilizado por muchos de los mejores guitarristas actuales. El pedal TS9 amplifica la señal de guitarra lo suficiente para impulsar la etapa de preamplificador de tu amplificador, ofreciendo un overdrive naturalmente sobrante y puro con un crunch de ritmo nítido. Gain: Controla la cantidad de overdrive Tone: Controla el sonido del efecto Volume: Controla el nivel de salida del efecto Type: OD",
+        "musicalTags": [
+          "Blues",
+          "Lead",
+          "Rhythm"
+        ],
+        "recommendedUse": "Ideal para empujar un ampli apenas cruncheado sin perder ataque de pua.",
+        "inspiration": "Tube Screamer style",
+        "suggestedPosition": "Antes del AMP",
+        "needTags": [
+          "blues",
+          "lead",
+          "rhythm"
+        ]
       },
       {
         "name": "Yellow OD",
@@ -458,7 +552,20 @@
         "descriptionHtml": "Basado en el legendario Klon® Centaur, este modelo de overdrive te ofrece una auténtica sensación de amplificador en una caja con un sonido pleno y rico que no es áspero ni retumbante. Gira la perilla de Gain al mínimo y obtendrás un excelente boost limpio.",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de ganancia<br>\r\n<strong>Tone:</strong> Controla el sonido del efecto<br>\r\n<strong>Volume:</strong> Controla el nivel de salida del efecto",
         "type": "Type: OD",
-        "searchText": "Penesas Basado en el legendario Klon® Centaur, este modelo de overdrive te ofrece una auténtica sensación de amplificador en una caja con un sonido pleno y rico que no es áspero ni retumbante. Gira la perilla de Gain al mínimo y obtendrás un excelente boost limpio. Gain: Controla la cantidad de ganancia Tone: Controla el sonido del efecto Volume: Controla el nivel de salida del efecto Type: OD"
+        "searchText": "Penesas Basado en el legendario Klon® Centaur, este modelo de overdrive te ofrece una auténtica sensación de amplificador en una caja con un sonido pleno y rico que no es áspero ni retumbante. Gira la perilla de Gain al mínimo y obtendrás un excelente boost limpio. Gain: Controla la cantidad de ganancia Tone: Controla el sonido del efecto Volume: Controla el nivel de salida del efecto Type: OD",
+        "musicalTags": [
+          "Blues",
+          "Clean boost",
+          "Lead"
+        ],
+        "recommendedUse": "Empuje transparente para clean boost, leads al borde del breakup y engordar single coils.",
+        "inspiration": "Klon Centaur style",
+        "suggestedPosition": "Antes del AMP",
+        "needTags": [
+          "blues",
+          "lead",
+          "clean"
+        ]
       },
       {
         "name": "Swarm",
@@ -521,7 +628,19 @@
         "descriptionHtml": "El Marshall® BluesBreaker es un pedal de baja ganancia con un tono transparente excepcional. El overdrive moderado y el boost sutil son los puntos fuertes, aunque puede ser muy enfático con un amplificador de tubos a todo volumen.",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de distorsión<br>\r\n<strong>Volume:</strong> Controla el nivel de salida del efecto<br>\r\n<strong>Bass/Middle/Treble:</strong> EQ de 3 bandas que controla el sonido del efecto",
         "type": "Type: OD",
-        "searchText": "Blues Master El Marshall® BluesBreaker es un pedal de baja ganancia con un tono transparente excepcional. El overdrive moderado y el boost sutil son los puntos fuertes, aunque puede ser muy enfático con un amplificador de tubos a todo volumen. Gain: Controla la cantidad de distorsión Volume: Controla el nivel de salida del efecto Bass/Middle/Treble: EQ de 3 bandas que controla el sonido del efecto Type: OD"
+        "searchText": "Blues Master El Marshall® BluesBreaker es un pedal de baja ganancia con un tono transparente excepcional. El overdrive moderado y el boost sutil son los puntos fuertes, aunque puede ser muy enfático con un amplificador de tubos a todo volumen. Gain: Controla la cantidad de distorsión Volume: Controla el nivel de salida del efecto Bass/Middle/Treble: EQ de 3 bandas que controla el sonido del efecto Type: OD",
+        "inspiration": "Bluesbreaker / Morning Glory family style",
+        "musicalTags": [
+          "Blues",
+          "Transparent OD",
+          "Rhythm"
+        ],
+        "recommendedUse": "Drive articulado de baja ganancia para acordes abiertos, worship rhythm y fraseo blues.",
+        "needTags": [
+          "blues",
+          "rhythm",
+          "clean"
+        ]
       },
       {
         "name": "Master OD",
@@ -584,7 +703,19 @@
         "descriptionHtml": "Basado en el legendario pedal de fuzz Dallas-Arbiter® Fuzz Face®. Dallas Arbiter conjuró el sonido del rock and roll durante medio siglo en 1966 con unos pocos transistores simples. El sonido de Fuzz Face era fuerte y agudo, e influyó en innumerables músicos famosos.\r\nFamous users: Jimi Hendrix,\r\nSantana, Pink Floyd, Jack White",
         "paramsHtml": "<strong>Fuzz:</strong> Controla la cantidad de ganancia<br>\r\n<strong>Volume:</strong> Controla el nivel de salida del efecto",
         "type": "Type: Fuzz",
-        "searchText": "Red Haze Basado en el legendario pedal de fuzz Dallas-Arbiter® Fuzz Face®. Dallas Arbiter conjuró el sonido del rock and roll durante medio siglo en 1966 con unos pocos transistores simples. El sonido de Fuzz Face era fuerte y agudo, e influyó en innumerables músicos famosos. Famous users: Jimi Hendrix, Santana, Pink Floyd, Jack White Fuzz: Controla la cantidad de ganancia Volume: Controla el nivel de salida del efecto Type: Fuzz"
+        "searchText": "Red Haze Basado en el legendario pedal de fuzz Dallas-Arbiter® Fuzz Face®. Dallas Arbiter conjuró el sonido del rock and roll durante medio siglo en 1966 con unos pocos transistores simples. El sonido de Fuzz Face era fuerte y agudo, e influyó en innumerables músicos famosos. Famous users: Jimi Hendrix, Santana, Pink Floyd, Jack White Fuzz: Controla la cantidad de ganancia Volume: Controla el nivel de salida del efecto Type: Fuzz",
+        "inspiration": "Fuzz Face style",
+        "musicalTags": [
+          "Fuzz",
+          "Vintage",
+          "Lead"
+        ],
+        "recommendedUse": "Fuzz vintage que limpia muy bien con el pote de volumen de la guitarra.",
+        "needTags": [
+          "lead",
+          "experimental",
+          "blues"
+        ]
       },
       {
         "name": "Sora Fuzz",
@@ -611,7 +742,19 @@
         "descriptionHtml": "Se basa en un efectuador de distorsión de tres perillas naranja clásico, que se puede usar para obtener fácilmente las características de timbre de los años 70-80.",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de distorsión<br>\r\n<strong>Tone:</strong> Controla el sonido del efecto<br>\r\n<strong>Volume:</strong> Controla el nivel de salida del efecto",
         "type": "Type: Dist",
-        "searchText": "SM Dist Se basa en un efectuador de distorsión de tres perillas naranja clásico, que se puede usar para obtener fácilmente las características de timbre de los años 70-80. Gain: Controla la cantidad de distorsión Tone: Controla el sonido del efecto Volume: Controla el nivel de salida del efecto Type: Dist"
+        "searchText": "SM Dist Se basa en un efectuador de distorsión de tres perillas naranja clásico, que se puede usar para obtener fácilmente las características de timbre de los años 70-80. Gain: Controla la cantidad de distorsión Tone: Controla el sonido del efecto Volume: Controla el nivel de salida del efecto Type: Dist",
+        "inspiration": "Boss DS-1 orange distortion style",
+        "musicalTags": [
+          "Rock",
+          "Distortion",
+          "Rhythm"
+        ],
+        "recommendedUse": "Distorsion naranja clasica para rock 80/90, ritmicas crudas y leads directos.",
+        "needTags": [
+          "lead",
+          "rhythm",
+          "experimental"
+        ]
       },
       {
         "name": "Darktale",
@@ -620,7 +763,19 @@
         "descriptionHtml": "Basado en la legendaria distorsión ProCo™ The Rat (versión temprana de OPamp LM308). The Rat cobra vida gracias a su amplio rango de botón Filter, cabeza de sonido brillante y compacta, extremo completo y plasticidad fuerte, lo que la convierte en favorita de muchos músicos. Famous users: Je Beck, Kurt Cobain",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de distorsión<br>\r\n<strong>Filter:</strong> Contrario a las agujas del reloj controla el sonido del efecto<br>\r\n<strong>Volume:</strong> Controla el nivel de salida del efecto",
         "type": "Type: Dist",
-        "searchText": "Darktale Basado en la legendaria distorsión ProCo™ The Rat (versión temprana de OPamp LM308). The Rat cobra vida gracias a su amplio rango de botón Filter, cabeza de sonido brillante y compacta, extremo completo y plasticidad fuerte, lo que la convierte en favorita de muchos músicos. Famous users: Je Beck, Kurt Cobain Gain: Controla la cantidad de distorsión Filter: Contrario a las agujas del reloj controla el sonido del efecto Volume: Controla el nivel de salida del efecto Type: Dist"
+        "searchText": "Darktale Basado en la legendaria distorsión ProCo™ The Rat (versión temprana de OPamp LM308). The Rat cobra vida gracias a su amplio rango de botón Filter, cabeza de sonido brillante y compacta, extremo completo y plasticidad fuerte, lo que la convierte en favorita de muchos músicos. Famous users: Je Beck, Kurt Cobain Gain: Controla la cantidad de distorsión Filter: Contrario a las agujas del reloj controla el sonido del efecto Volume: Controla el nivel de salida del efecto Type: Dist",
+        "inspiration": "ProCo RAT style",
+        "musicalTags": [
+          "Rock",
+          "Distortion",
+          "Fuzz"
+        ],
+        "recommendedUse": "Va de distorsion cremosa a texturas mas fuzz al subir la ganancia.",
+        "needTags": [
+          "lead",
+          "rhythm",
+          "experimental"
+        ]
       },
       {
         "name": "Chief",
@@ -784,7 +939,20 @@
         "descriptionHtml": "Basado en Fender® Tweed Deluxe. Este amplificador con rango dinámico desde limpio hasta overdrive desenfrenado, desde country rock hasta distorsión, el Fender® Tweed Deluxe* ha sido un símbolo en cada estilo durante más de 60 años.",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de ganancia (pre gain)<br>\r\n<strong>Tone:</strong> Controla el sonido del efecto<br>\r\n<strong>Volume:</strong> Controla el volumen de salida (post ganancia)",
         "type": "Type: Clean",
-        "searchText": "Tweedy Basado en Fender® Tweed Deluxe. Este amplificador con rango dinámico desde limpio hasta overdrive desenfrenado, desde country rock hasta distorsión, el Fender® Tweed Deluxe* ha sido un símbolo en cada estilo durante más de 60 años. Gain: Controla la cantidad de ganancia (pre gain) Tone: Controla el sonido del efecto Volume: Controla el volumen de salida (post ganancia) Type: Clean"
+        "searchText": "Tweedy Basado en Fender® Tweed Deluxe. Este amplificador con rango dinámico desde limpio hasta overdrive desenfrenado, desde country rock hasta distorsión, el Fender® Tweed Deluxe* ha sido un símbolo en cada estilo durante más de 60 años. Gain: Controla la cantidad de ganancia (pre gain) Tone: Controla el sonido del efecto Volume: Controla el volumen de salida (post ganancia) Type: Clean",
+        "musicalTags": [
+          "Blues",
+          "Crunch",
+          "Vintage"
+        ],
+        "recommendedUse": "Sensacion de ampli tweed chico para breakup roots, blues rhythm y drive sensible al toque.",
+        "inspiration": "Fender Tweed Deluxe style",
+        "suggestedPosition": "Bloque AMP",
+        "needTags": [
+          "blues",
+          "rhythm",
+          "clean"
+        ]
       },
       {
         "name": "Bellman_59N",
@@ -793,7 +961,19 @@
         "descriptionHtml": "Based on Fender® ’59 Bassman®. The most dramatic speaker in the history of Rock&Roll, originally designed for bass, has become the most classic guitar speaker. As clear as water, Vacuum tubemakes the sound more beautiful, make musical instrument manufacturers are eager to imitate the product.",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de ganancia (pre gain)<br>\r\n<strong>Presence:</strong> Controla el headroom del efecto<br>\r\n<strong>Volume:</strong> Controla el volumen de salida (post ganancia)<br>\r\n<strong>Bass/Middle/Treble:</strong> EQ de 3 bandas",
         "type": "Type: Clean",
-        "searchText": "Bellman_59N Based on Fender® ’59 Bassman®. The most dramatic speaker in the history of Rock&Roll, originally designed for bass, has become the most classic guitar speaker. As clear as water, Vacuum tubemakes the sound more beautiful, make musical instrument manufacturers are eager to imitate the product. Gain: Controla la cantidad de ganancia (pre gain) Presence: Controla el headroom del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas Type: Clean"
+        "searchText": "Bellman_59N Based on Fender® ’59 Bassman®. The most dramatic speaker in the history of Rock&Roll, originally designed for bass, has become the most classic guitar speaker. As clear as water, Vacuum tubemakes the sound more beautiful, make musical instrument manufacturers are eager to imitate the product. Gain: Controla la cantidad de ganancia (pre gain) Presence: Controla el headroom del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas Type: Clean",
+        "inspiration": "Fender '59 Bassman normal style",
+        "musicalTags": [
+          "Blues",
+          "Vintage",
+          "Clean"
+        ],
+        "recommendedUse": "Medios calidos vintage para blues rhythm, tonos roots y limpios sensibles al toque.",
+        "needTags": [
+          "blues",
+          "rhythm",
+          "clean"
+        ]
       },
       {
         "name": "Bellman 59B",
@@ -802,7 +982,19 @@
         "descriptionHtml": "Based on Fender® ’59 Bassman®.",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de ganancia (pre gain)<br>\r\n<strong>Presence:</strong> Controla el headroom del efecto<br>\r\n<strong>Volume:</strong> Controla el volumen de salida (post ganancia)<br>\r\n<strong>Bass/Middle/Treble:</strong> EQ de 3 bandas",
         "type": "Type: Drive",
-        "searchText": "Bellman 59B Based on Fender® ’59 Bassman®. Gain: Controla la cantidad de ganancia (pre gain) Presence: Controla el headroom del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas Type: Drive"
+        "searchText": "Bellman 59B Based on Fender® ’59 Bassman®. Gain: Controla la cantidad de ganancia (pre gain) Presence: Controla el headroom del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas Type: Drive",
+        "inspiration": "Fender '59 Bassman bright/drive style",
+        "musicalTags": [
+          "Blues",
+          "Vintage",
+          "Crunch"
+        ],
+        "recommendedUse": "Usalo para breakup tweed mas grande y leads blues old-school.",
+        "needTags": [
+          "blues",
+          "lead",
+          "rhythm"
+        ]
       },
       {
         "name": "Dark Twin",
@@ -811,7 +1003,18 @@
         "descriptionHtml": "Based on Fender® ’65 Twin Reverb®. With a Stratocaster, the classic sound can be easily restored in both country jazz and rock music.",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de ganancia (pre gain)<br>\r\n<strong>Volume:</strong> Controla el volumen de salida (post ganancia)<br>\r\n<strong>Bass/Middle/Treble:</strong> EQ de 3 bandas<br>\r\n<strong>Bright:</strong> Activa/desactiva brillo extra",
         "type": "Type: Clean",
-        "searchText": "Dark Twin Based on Fender® ’65 Twin Reverb®. With a Stratocaster, the classic sound can be easily restored in both country jazz and rock music. Gain: Controla la cantidad de ganancia (pre gain) Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas Bright: Activa/desactiva brillo extra Type: Clean"
+        "searchText": "Dark Twin Based on Fender® ’65 Twin Reverb®. With a Stratocaster, the classic sound can be easily restored in both country jazz and rock music. Gain: Controla la cantidad de ganancia (pre gain) Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas Bright: Activa/desactiva brillo extra Type: Clean",
+        "inspiration": "Fender Twin Reverb '65 style",
+        "musicalTags": [
+          "Clean",
+          "Funk",
+          "Pedal platform"
+        ],
+        "recommendedUse": "Plataforma limpia grande y cristalina, excelente para pedales, funk rhythm y cleans worship.",
+        "needTags": [
+          "clean",
+          "rhythm"
+        ]
       },
       {
         "name": "Dark DLX",
@@ -838,7 +1041,18 @@
         "descriptionHtml": "Basado en Fender® Silverface Twin Reverb®. Construido entre 1967 y 1981, este amplificador legendario ofrece el sonido inconfundible de la historia con tonos limpios brillantes y un carácter vintage rico.",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de ganancia (pre gain)<br>\r\n<strong>Volume:</strong> Controla el volumen de salida (post ganancia)<br>\r\n<strong>Bass/Treble:</strong> EQ de 2 bandas que controla el sonido del efecto",
         "type": "Type: Clean",
-        "searchText": "Silver Twin Basado en Fender® Silverface Twin Reverb®. Construido entre 1967 y 1981, este amplificador legendario ofrece el sonido inconfundible de la historia con tonos limpios brillantes y un carácter vintage rico. Gain: Controla la cantidad de ganancia (pre gain) Volume: Controla el volumen de salida (post ganancia) Bass/Treble: EQ de 2 bandas que controla el sonido del efecto Type: Clean"
+        "searchText": "Silver Twin Basado en Fender® Silverface Twin Reverb®. Construido entre 1967 y 1981, este amplificador legendario ofrece el sonido inconfundible de la historia con tonos limpios brillantes y un carácter vintage rico. Gain: Controla la cantidad de ganancia (pre gain) Volume: Controla el volumen de salida (post ganancia) Bass/Treble: EQ de 2 bandas que controla el sonido del efecto Type: Clean",
+        "inspiration": "Fender Silverface Twin Reverb style",
+        "musicalTags": [
+          "Clean",
+          "Pedal platform",
+          "Vintage"
+        ],
+        "recommendedUse": "Plataforma limpia vintage brillante con mucho headroom.",
+        "needTags": [
+          "clean",
+          "rhythm"
+        ]
       },
       {
         "name": "SUPDual CL",
@@ -874,7 +1088,18 @@
         "descriptionHtml": "Basado en el canal normal VOX® AC30HW®. Famoso por su sonido cristalino y overdrive cálido, este amplificador británico icónico se convirtió en el favorito de bandas como The Beatles, The Rolling Stones, Oasis, Radiohead y muchos más.",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de ganancia (pre gain)<br>\r\n<strong>Volume:</strong> Controla el volumen de salida (post ganancia)<br>\r\n<strong>Tone Cut:</strong> Contrario a las agujas del reloj controla el sonido del efecto<br>\r\n<strong>Bright:</strong> Activa/desactiva brillo extra",
         "type": "Type: Clean",
-        "searchText": "Foxy 30N Basado en el canal normal VOX® AC30HW®. Famoso por su sonido cristalino y overdrive cálido, este amplificador británico icónico se convirtió en el favorito de bandas como The Beatles, The Rolling Stones, Oasis, Radiohead y muchos más. Gain: Controla la cantidad de ganancia (pre gain) Volume: Controla el volumen de salida (post ganancia) Tone Cut: Contrario a las agujas del reloj controla el sonido del efecto Bright: Activa/desactiva brillo extra Type: Clean"
+        "searchText": "Foxy 30N Basado en el canal normal VOX® AC30HW®. Famoso por su sonido cristalino y overdrive cálido, este amplificador británico icónico se convirtió en el favorito de bandas como The Beatles, The Rolling Stones, Oasis, Radiohead y muchos más. Gain: Controla la cantidad de ganancia (pre gain) Volume: Controla el volumen de salida (post ganancia) Tone Cut: Contrario a las agujas del reloj controla el sonido del efecto Bright: Activa/desactiva brillo extra Type: Clean",
+        "inspiration": "Vox AC30 normal channel style",
+        "musicalTags": [
+          "Clean",
+          "Chime",
+          "Rhythm"
+        ],
+        "recommendedUse": "Usalo para limpios AC mas redondos y ritmicas con campaneo.",
+        "needTags": [
+          "clean",
+          "rhythm"
+        ]
       },
       {
         "name": "Foxy 30TB",
@@ -883,7 +1108,21 @@
         "descriptionHtml": "Basado en el canal normal VOX® AC30HW®. Ofrece el timbre británico legendario con carácter de overdrive mejorado y respuesta dinámica perfecta para tonos de rock clásico.",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de ganancia (pre gain)<br>\r\n<strong>Tone Cut:</strong> Contrario a las agujas del reloj controla el sonido del efecto<br>\r\n<strong>Volume:</strong> Controla el volumen de salida (post ganancia)<br>\r\n<strong>Bass/Treble:</strong> EQ de 2 bandas que controla el sonido del efecto<br>\r\n<strong>Char:</strong> Selecciona entre Cool (ganancia más baja) y Hot (ganancia más alta)",
         "type": "Type: Drive",
-        "searchText": "Foxy 30TB Basado en el canal normal VOX® AC30HW®. Ofrece el timbre británico legendario con carácter de overdrive mejorado y respuesta dinámica perfecta para tonos de rock clásico. Gain: Controla la cantidad de ganancia (pre gain) Tone Cut: Contrario a las agujas del reloj controla el sonido del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Treble: EQ de 2 bandas que controla el sonido del efecto Char: Selecciona entre Cool (ganancia más baja) y Hot (ganancia más alta) Type: Drive"
+        "searchText": "Foxy 30TB Basado en el canal normal VOX® AC30HW®. Ofrece el timbre británico legendario con carácter de overdrive mejorado y respuesta dinámica perfecta para tonos de rock clásico. Gain: Controla la cantidad de ganancia (pre gain) Tone Cut: Contrario a las agujas del reloj controla el sonido del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Treble: EQ de 2 bandas que controla el sonido del efecto Char: Selecciona entre Cool (ganancia más baja) y Hot (ganancia más alta) Type: Drive",
+        "musicalTags": [
+          "Clean",
+          "Worship",
+          "Chime",
+          "Rhythm"
+        ],
+        "recommendedUse": "Brillo britanico clasico para worship, ritmicas indie y texturas al borde del breakup.",
+        "inspiration": "Vox AC30 Top Boost style",
+        "suggestedPosition": "Bloque AMP",
+        "needTags": [
+          "clean",
+          "rhythm",
+          "blues"
+        ]
       },
       {
         "name": "J-120 CL",
@@ -892,7 +1131,20 @@
         "descriptionHtml": "Basado en el legendario amplificador combo de estado sólido Jazz Chorus. Lanzado en 1975, se hizo famoso por su tono limpio prístino y su efecto de coro estéreo característico.",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de ganancia/salida del efecto<br>\r\n<strong>Bright:</strong> Activa/desactiva presencia extra<br>\r\n<strong>Bass/Middle/Treble:</strong> EQ de 3 bandas que controla el sonido del efecto",
         "type": "Type: Clean",
-        "searchText": "J-120 CL Basado en el legendario amplificador combo de estado sólido Jazz Chorus. Lanzado en 1975, se hizo famoso por su tono limpio prístino y su efecto de coro estéreo característico. Gain: Controla la cantidad de ganancia/salida del efecto Bright: Activa/desactiva presencia extra Bass/Middle/Treble: EQ de 3 bandas que controla el sonido del efecto Type: Clean"
+        "searchText": "J-120 CL Basado en el legendario amplificador combo de estado sólido Jazz Chorus. Lanzado en 1975, se hizo famoso por su tono limpio prístino y su efecto de coro estéreo característico. Gain: Controla la cantidad de ganancia/salida del efecto Bright: Activa/desactiva presencia extra Bass/Middle/Treble: EQ de 3 bandas que controla el sonido del efecto Type: Clean",
+        "musicalTags": [
+          "Clean",
+          "Funk",
+          "Ambient"
+        ],
+        "recommendedUse": "Base limpia cristalina para chorus, funk rhythm, pads worship y sonidos con pedales.",
+        "inspiration": "Roland JC-120 style",
+        "suggestedPosition": "Bloque AMP",
+        "needTags": [
+          "clean",
+          "ambient",
+          "rhythm"
+        ]
       },
       {
         "name": "Match CL",
@@ -901,7 +1153,18 @@
         "descriptionHtml": "Basado en el tono limpio del combo Matchless™ Chieftain 212®. Desde 1989, los amplificadores Matchless® han sido conocidos por su artesanía premium, respuesta dinámica y textura armónica rica.",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de ganancia (pre gain)<br>\r\n<strong>Presence:</strong> Controla el headroom del efecto<br>\r\n<strong>Volume:</strong> Controla el volumen de salida (post ganancia)<br>\r\n<strong>Bass/Middle/Treble:</strong> EQ de 3 bandas que controla el sonido del efecto",
         "type": "Type: Clean",
-        "searchText": "Match CL Basado en el tono limpio del combo Matchless™ Chieftain 212®. Desde 1989, los amplificadores Matchless® han sido conocidos por su artesanía premium, respuesta dinámica y textura armónica rica. Gain: Controla la cantidad de ganancia (pre gain) Presence: Controla el headroom del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas que controla el sonido del efecto Type: Clean"
+        "searchText": "Match CL Basado en el tono limpio del combo Matchless™ Chieftain 212®. Desde 1989, los amplificadores Matchless® han sido conocidos por su artesanía premium, respuesta dinámica y textura armónica rica. Gain: Controla la cantidad de ganancia (pre gain) Presence: Controla el headroom del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas que controla el sonido del efecto Type: Clean",
+        "inspiration": "Matchless boutique clean style",
+        "musicalTags": [
+          "Boutique",
+          "Clean",
+          "Worship"
+        ],
+        "recommendedUse": "Base clean boutique dinamica con armonicos ricos para worship y ritmicas sensibles al toque.",
+        "needTags": [
+          "clean",
+          "rhythm"
+        ]
       },
       {
         "name": "Match OD",
@@ -910,7 +1173,19 @@
         "descriptionHtml": "Basado en el tono de overdrive del combo Matchless™ Chieftain 212®. Ofrece overdrive armónico rico con sensibilidad al toque excepcional y respuesta dinámica.",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de ganancia (pre gain)<br>\r\n<strong>Presence:</strong> Controla el headroom del efecto<br>\r\n<strong>Volume:</strong> Controla el volumen de salida (post ganancia)<br>\r\n<strong>Bass/Middle/Treble:</strong> EQ de 3 bandas que controla el sonido del efecto",
         "type": "Type: Drive",
-        "searchText": "Match OD Basado en el tono de overdrive del combo Matchless™ Chieftain 212®. Ofrece overdrive armónico rico con sensibilidad al toque excepcional y respuesta dinámica. Gain: Controla la cantidad de ganancia (pre gain) Presence: Controla el headroom del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas que controla el sonido del efecto Type: Drive"
+        "searchText": "Match OD Basado en el tono de overdrive del combo Matchless™ Chieftain 212®. Ofrece overdrive armónico rico con sensibilidad al toque excepcional y respuesta dinámica. Gain: Controla la cantidad de ganancia (pre gain) Presence: Controla el headroom del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas que controla el sonido del efecto Type: Drive",
+        "inspiration": "Matchless boutique drive style",
+        "musicalTags": [
+          "Boutique",
+          "Crunch",
+          "Lead"
+        ],
+        "recommendedUse": "Muy bueno para breakup boutique con muchos armonicos y leads expresivos.",
+        "needTags": [
+          "blues",
+          "lead",
+          "rhythm"
+        ]
       },
       {
         "name": "L-Star CL",
@@ -1162,7 +1437,19 @@
         "descriptionHtml": "Based on the famous “Brown Eye” UK-style boutique amplifier (BE channel). Built on the foundation of the classic Marshall® Plexi®, this amp delivers smooth highs, tight low-end response, and versatile British overdrive tones.",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de ganancia (pre gain)<br>\r\n<strong>Presence:</strong> Controla el headroom del efecto<br>\r\n<strong>Volume:</strong> Controla el volumen de salida (post ganancia)<br>\r\n<strong>Bass/Middle/Treble:</strong> EQ de 3 bandas que controla el sonido del efecto",
         "type": "Type: Drive",
-        "searchText": "Flagman 1 Based on the famous “Brown Eye” UK-style boutique amplifier (BE channel). Built on the foundation of the classic Marshall® Plexi®, this amp delivers smooth highs, tight low-end response, and versatile British overdrive tones. Gain: Controla la cantidad de ganancia (pre gain) Presence: Controla el headroom del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas que controla el sonido del efecto Type: Drive"
+        "searchText": "Flagman 1 Based on the famous “Brown Eye” UK-style boutique amplifier (BE channel). Built on the foundation of the classic Marshall® Plexi®, this amp delivers smooth highs, tight low-end response, and versatile British overdrive tones. Gain: Controla la cantidad de ganancia (pre gain) Presence: Controla el headroom del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas que controla el sonido del efecto Type: Drive",
+        "inspiration": "Friedman BE/Brown Eye style",
+        "musicalTags": [
+          "Rock",
+          "Lead",
+          "Crunch"
+        ],
+        "recommendedUse": "Ganancia britanica moderna tipo brown sound para rock rhythm y leads cantados.",
+        "needTags": [
+          "lead",
+          "rhythm",
+          "metal"
+        ]
       },
       {
         "name": "Flagman 2",
@@ -1171,7 +1458,19 @@
         "descriptionHtml": "Based on the famous “Brown Eye” UK-style boutique amplifier (BE channel). Produces smooth British overdrive with excellent sustain, tight bass response, and detailed harmonics.",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de ganancia (pre gain)<br>\r\n<strong>Presence:</strong> Controla el headroom del efecto<br>\r\n<strong>Volume:</strong> Controla el volumen de salida (post ganancia)<br>\r\n<strong>Bass/Middle/Treble:</strong> EQ de 3 bandas que controla el sonido del efecto",
         "type": "Type: Drive",
-        "searchText": "Flagman 2 Based on the famous “Brown Eye” UK-style boutique amplifier (BE channel). Produces smooth British overdrive with excellent sustain, tight bass response, and detailed harmonics. Gain: Controla la cantidad de ganancia (pre gain) Presence: Controla el headroom del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas que controla el sonido del efecto Type: Drive"
+        "searchText": "Flagman 2 Based on the famous “Brown Eye” UK-style boutique amplifier (BE channel). Produces smooth British overdrive with excellent sustain, tight bass response, and detailed harmonics. Gain: Controla la cantidad de ganancia (pre gain) Presence: Controla el headroom del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas que controla el sonido del efecto Type: Drive",
+        "inspiration": "Friedman BE/Brown Eye style",
+        "musicalTags": [
+          "Rock",
+          "Crunch",
+          "Rhythm"
+        ],
+        "recommendedUse": "Overdrive britanico apretado para ritmicas modernas y leads con punch.",
+        "needTags": [
+          "lead",
+          "rhythm",
+          "metal"
+        ]
       },
       {
         "name": "Flagman+ 1",
@@ -1180,7 +1479,18 @@
         "descriptionHtml": "Based on the famous “Brown Eye” UK-style boutique amplifier (HBE channel). Delivers saturated high-gain tones with tight low-end punch, aggressive mids, and smooth sustain.",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de ganancia (pre gain)<br>\r\n<strong>Presence:</strong> Controla el headroom del efecto<br>\r\n<strong>Volume:</strong> Controla el volumen de salida (post ganancia)<br>\r\n<strong>Bass/Middle/Treble:</strong> EQ de 3 bandas que controla el sonido del efecto",
         "type": "Type: Hi Gain",
-        "searchText": "Flagman+ 1 Based on the famous “Brown Eye” UK-style boutique amplifier (HBE channel). Delivers saturated high-gain tones with tight low-end punch, aggressive mids, and smooth sustain. Gain: Controla la cantidad de ganancia (pre gain) Presence: Controla el headroom del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas que controla el sonido del efecto Type: Hi Gain"
+        "searchText": "Flagman+ 1 Based on the famous “Brown Eye” UK-style boutique amplifier (HBE channel). Delivers saturated high-gain tones with tight low-end punch, aggressive mids, and smooth sustain. Gain: Controla la cantidad de ganancia (pre gain) Presence: Controla el headroom del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas que controla el sonido del efecto Type: Hi Gain",
+        "inspiration": "Friedman HBE/Brown Eye high-gain style",
+        "musicalTags": [
+          "Rock",
+          "Lead",
+          "High gain"
+        ],
+        "recommendedUse": "Lead rock moderno saturado, con graves firmes y sustain suave.",
+        "needTags": [
+          "lead",
+          "metal"
+        ]
       },
       {
         "name": "Flagman+ 2",
@@ -1189,7 +1499,18 @@
         "descriptionHtml": "Based on the famous “Brown Eye” UK-style boutique amplifier (HBE channel). Produces modern high-gain distortion with strong attack, rich sustain, and harmonically dense overdrive.",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de ganancia (pre gain)<br>\r\n<strong>Presence:</strong> Controla el headroom del efecto<br>\r\n<strong>Volume:</strong> Controla el volumen de salida (post ganancia)<br>\r\n<strong>Bass/Middle/Treble:</strong> EQ de 3 bandas que controla el sonido del efecto",
         "type": "Type: Hi Gain",
-        "searchText": "Flagman+ 2 Based on the famous “Brown Eye” UK-style boutique amplifier (HBE channel). Produces modern high-gain distortion with strong attack, rich sustain, and harmonically dense overdrive. Gain: Controla la cantidad de ganancia (pre gain) Presence: Controla el headroom del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas que controla el sonido del efecto Type: Hi Gain"
+        "searchText": "Flagman+ 2 Based on the famous “Brown Eye” UK-style boutique amplifier (HBE channel). Produces modern high-gain distortion with strong attack, rich sustain, and harmonically dense overdrive. Gain: Controla la cantidad de ganancia (pre gain) Presence: Controla el headroom del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas que controla el sonido del efecto Type: Hi Gain",
+        "inspiration": "Friedman HBE/Brown Eye high-gain style",
+        "musicalTags": [
+          "Rock",
+          "Lead",
+          "High gain"
+        ],
+        "recommendedUse": "Drive brown-sound mas saturado para solos agresivos y hard rock.",
+        "needTags": [
+          "lead",
+          "metal"
+        ]
       },
       {
         "name": "Mess2C+ 1",
@@ -1225,7 +1546,19 @@
         "descriptionHtml": "Basado en el canal de lead Mesa/Boogie® Mark IV™. Este amplificador ofrece armónicos ricos, sustain infinito y tonos de alto gain moderno poderosos con versatilidad excepcional.",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de ganancia (pre gain)<br>\r\n<strong>Presence:</strong> Controla el headroom del efecto<br>\r\n<strong>Volume:</strong> Controla el volumen de salida (post ganancia)<br>\r\n<strong>Bass/Middle/Treble:</strong> EQ de 3 bandas que controla el sonido del efecto",
         "type": "Type: Hi Gain",
-        "searchText": "Mess4 LD Basado en el canal de lead Mesa/Boogie® Mark IV™. Este amplificador ofrece armónicos ricos, sustain infinito y tonos de alto gain moderno poderosos con versatilidad excepcional. Gain: Controla la cantidad de ganancia (pre gain) Presence: Controla el headroom del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas que controla el sonido del efecto Type: Hi Gain"
+        "searchText": "Mess4 LD Basado en el canal de lead Mesa/Boogie® Mark IV™. Este amplificador ofrece armónicos ricos, sustain infinito y tonos de alto gain moderno poderosos con versatilidad excepcional. Gain: Controla la cantidad de ganancia (pre gain) Presence: Controla el headroom del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas que controla el sonido del efecto Type: Hi Gain",
+        "musicalTags": [
+          "Metal",
+          "Lead",
+          "High gain"
+        ],
+        "recommendedUse": "Base potente para lead o metal moderno cuando necesitas sustain, medios firmes y autoridad.",
+        "inspiration": "Mesa Mark-style lead",
+        "suggestedPosition": "Bloque AMP",
+        "needTags": [
+          "metal",
+          "lead"
+        ]
       },
       {
         "name": "Mess4 LD 2",
@@ -1252,7 +1585,18 @@
         "descriptionHtml": "Basado en el modo Vintage Mesa/Boogie® Dual Rectifier®. Conocido por su distorsión cálida y respuesta de bajo masiva, este amplificador ofrece tonos de rock y metal moderno espesos.",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de ganancia (pre gain)<br>\r\n<strong>Presence:</strong> Controla el headroom del efecto<br>\r\n<strong>Volume:</strong> Controla el volumen de salida (post ganancia)<br>\r\n<strong>Bass/Middle/Treble:</strong> EQ de 3 bandas que controla el sonido del efecto",
         "type": "Type: Hi Gain",
-        "searchText": "Mess DualV Basado en el modo Vintage Mesa/Boogie® Dual Rectifier®. Conocido por su distorsión cálida y respuesta de bajo masiva, este amplificador ofrece tonos de rock y metal moderno espesos. Gain: Controla la cantidad de ganancia (pre gain) Presence: Controla el headroom del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas que controla el sonido del efecto Type: Hi Gain"
+        "searchText": "Mess DualV Basado en el modo Vintage Mesa/Boogie® Dual Rectifier®. Conocido por su distorsión cálida y respuesta de bajo masiva, este amplificador ofrece tonos de rock y metal moderno espesos. Gain: Controla la cantidad de ganancia (pre gain) Presence: Controla el headroom del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas que controla el sonido del efecto Type: Hi Gain",
+        "inspiration": "Mesa Dual Rectifier Vintage mode style",
+        "musicalTags": [
+          "Metal",
+          "Rock",
+          "High gain"
+        ],
+        "recommendedUse": "Graves enormes y ganancia gruesa para ritmicas rock y metal.",
+        "needTags": [
+          "metal",
+          "rhythm"
+        ]
       },
       {
         "name": "Mess DualM",
@@ -1261,7 +1605,18 @@
         "descriptionHtml": "Basado en el modo Moderno Mesa/Boogie® Dual Rectifier®. Produce distorsión agresiva de alto gain moderno con bajo apretado, saturación masiva y ataque poderoso.",
         "paramsHtml": "<strong>Gain:</strong> Controla la cantidad de ganancia (pre gain)<br>\r\n<strong>Presence:</strong> Controla el headroom del efecto<br>\r\n<strong>Volume:</strong> Controla el volumen de salida (post ganancia)<br>\r\n<strong>Bass/Middle/Treble:</strong> EQ de 3 bandas que controla el sonido del efecto",
         "type": "Type: Hi Gain",
-        "searchText": "Mess DualM Basado en el modo Moderno Mesa/Boogie® Dual Rectifier®. Produce distorsión agresiva de alto gain moderno con bajo apretado, saturación masiva y ataque poderoso. Gain: Controla la cantidad de ganancia (pre gain) Presence: Controla el headroom del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas que controla el sonido del efecto Type: Hi Gain"
+        "searchText": "Mess DualM Basado en el modo Moderno Mesa/Boogie® Dual Rectifier®. Produce distorsión agresiva de alto gain moderno con bajo apretado, saturación masiva y ataque poderoso. Gain: Controla la cantidad de ganancia (pre gain) Presence: Controla el headroom del efecto Volume: Controla el volumen de salida (post ganancia) Bass/Middle/Treble: EQ de 3 bandas que controla el sonido del efecto Type: Hi Gain",
+        "inspiration": "Mesa Dual Rectifier Modern mode style",
+        "musicalTags": [
+          "Metal",
+          "High gain",
+          "Rhythm"
+        ],
+        "recommendedUse": "Ataque Rectifier moderno y agresivo para ritmicas high-gain apretadas.",
+        "needTags": [
+          "metal",
+          "rhythm"
+        ]
       },
       {
         "name": "Juice30 OD",
@@ -1535,7 +1890,18 @@
         "descriptionHtml": "Vintage Fender® ’65 Twin Reverb 2x12\" cabinet",
         "paramsHtml": "<strong>Volume:</strong> Controla el volumen de salida del efecto<br>\r\n<strong>Low Cut:</strong> Filtro paso-altos, corta la señal de baja frecuencia por debajo de la seleccionada<br>\r\n<strong>High Cut:</strong> Filtro paso-bajos, corta la señal de alta frecuencia por encima de la seleccionada",
         "type": "Type: 2 x 12”",
-        "searchText": "Dark Twin Vintage Fender® ’65 Twin Reverb 2x12\" cabinet Volume: Controla el volumen de salida del efecto Low Cut: Filtro paso-altos, corta la señal de baja frecuencia por debajo de la seleccionada High Cut: Filtro paso-bajos, corta la señal de alta frecuencia por encima de la seleccionada Type: 2 x 12”"
+        "searchText": "Dark Twin Vintage Fender® ’65 Twin Reverb 2x12\" cabinet Volume: Controla el volumen de salida del efecto Low Cut: Filtro paso-altos, corta la señal de baja frecuencia por debajo de la seleccionada High Cut: Filtro paso-bajos, corta la señal de alta frecuencia por encima de la seleccionada Type: 2 x 12”",
+        "inspiration": "Fender Twin Reverb '65 style",
+        "musicalTags": [
+          "Clean",
+          "Funk",
+          "Pedal platform"
+        ],
+        "recommendedUse": "Plataforma limpia grande y cristalina, excelente para pedales, funk rhythm y cleans worship.",
+        "needTags": [
+          "clean",
+          "rhythm"
+        ]
       },
       {
         "name": "Dark CS",
@@ -2178,7 +2544,19 @@
         "descriptionHtml": "Basado en el legendario enorme pedal de coro de conjunto nacido a finales de los años 70 (modo coro), produciendo un tono de coro análogo vintage rico y brillante. Sonido de coro análogo cálido, rico y onírico.",
         "paramsHtml": "<strong>Depth:</strong> Controla la profundidad del coro<br>\r\n<strong>Rate:</strong> Controla la tasa de coro<br>\r\n<strong>Volume:</strong> Controla el nivel del efecto<br>\r\n<strong>Sync:</strong> Activa/desactiva la sincronización de Tap Tempo",
         "type": "Type: Chorus",
-        "searchText": "G-Chorus Basado en el legendario enorme pedal de coro de conjunto nacido a finales de los años 70 (modo coro), produciendo un tono de coro análogo vintage rico y brillante. Sonido de coro análogo cálido, rico y onírico. Depth: Controla la profundidad del coro Rate: Controla la tasa de coro Volume: Controla el nivel del efecto Sync: Activa/desactiva la sincronización de Tap Tempo Type: Chorus"
+        "searchText": "G-Chorus Basado en el legendario enorme pedal de coro de conjunto nacido a finales de los años 70 (modo coro), produciendo un tono de coro análogo vintage rico y brillante. Sonido de coro análogo cálido, rico y onírico. Depth: Controla la profundidad del coro Rate: Controla la tasa de coro Volume: Controla el nivel del efecto Sync: Activa/desactiva la sincronización de Tap Tempo Type: Chorus",
+        "inspiration": "Boss CE-1 chorus ensemble style",
+        "musicalTags": [
+          "Clean",
+          "Chorus",
+          "Ambient"
+        ],
+        "recommendedUse": "Chorus vintage amplio para arpegios limpios, pads worship y texturas ochenteras.",
+        "needTags": [
+          "clean",
+          "ambient",
+          "rhythm"
+        ]
       },
       {
         "name": "C-Chorus",
@@ -2286,7 +2664,19 @@
         "descriptionHtml": "Basado en el legendario MXR® M101 Phase 90. ¿Has escuchado el sonido de guitarra en \"Eruption\" de Eddie Van Halen? Ese tono distorsionado con una sensación de rotación se realiza mediante Phase 90.",
         "paramsHtml": "<strong>Rate:</strong> Controla la velocidad del vibrato<br>\r\n<strong>Sync:</strong> Activa/desactiva la sincronización de Tap Tempo",
         "type": "Type: Phaser",
-        "searchText": "O-Phase Basado en el legendario MXR® M101 Phase 90. ¿Has escuchado el sonido de guitarra en \"Eruption\" de Eddie Van Halen? Ese tono distorsionado con una sensación de rotación se realiza mediante Phase 90. Rate: Controla la velocidad del vibrato Sync: Activa/desactiva la sincronización de Tap Tempo Type: Phaser"
+        "searchText": "O-Phase Basado en el legendario MXR® M101 Phase 90. ¿Has escuchado el sonido de guitarra en \"Eruption\" de Eddie Van Halen? Ese tono distorsionado con una sensación de rotación se realiza mediante Phase 90. Rate: Controla la velocidad del vibrato Sync: Activa/desactiva la sincronización de Tap Tempo Type: Phaser",
+        "inspiration": "MXR Phase 90 style",
+        "musicalTags": [
+          "Movement",
+          "Classic rock",
+          "Lead"
+        ],
+        "recommendedUse": "Color phaser clasico para riffs rock y movimiento en solos.",
+        "needTags": [
+          "lead",
+          "rhythm",
+          "experimental"
+        ]
       },
       {
         "name": "G-Phase",
@@ -2376,7 +2766,18 @@
         "descriptionHtml": "Proporciona efecto de bitcrushing/reducción de muestras con moda musical.",
         "paramsHtml": "<strong>Mix:</strong> Controla la relación de señal wet/dry of the effect<br>\r\n<strong>Krush:</strong> Controla la velocidad de muestreo del efecto<br>\r\n<strong>Bit:</strong> Controla la resolución de bit del efecto<br>\r\n<strong>Hi Cut:</strong> Controla la frecuencia de corte del filtro de corte alto<br>\r\n<strong>Lo Cut:</strong> Controls the cutoff frequency of the low cut filter",
         "type": "Type: Special",
-        "searchText": "Bit Smash Proporciona efecto de bitcrushing/reducción de muestras con moda musical. Mix: Controla la relación de señal wet/dry of the effect Krush: Controla la velocidad de muestreo del efecto Bit: Controla la resolución de bit del efecto Hi Cut: Controla la frecuencia de corte del filtro de corte alto Lo Cut: Controls the cutoff frequency of the low cut filter Type: Special"
+        "searchText": "Bit Smash Proporciona efecto de bitcrushing/reducción de muestras con moda musical. Mix: Controla la relación de señal wet/dry of the effect Krush: Controla la velocidad de muestreo del efecto Bit: Controla la resolución de bit del efecto Hi Cut: Controla la frecuencia de corte del filtro de corte alto Lo Cut: Controls the cutoff frequency of the low cut filter Type: Special",
+        "musicalTags": [
+          "Experimental",
+          "Lo-fi",
+          "Textura"
+        ],
+        "recommendedUse": "Usalo con cuidado para partes lo-fi, texturas tipo synth o momentos de ruptura.",
+        "inspiration": "Bitcrusher style",
+        "suggestedPosition": "Bloque MOD",
+        "needTags": [
+          "experimental"
+        ]
       },
       {
         "name": "Auto Swell",
@@ -2468,7 +2869,18 @@
         "descriptionHtml": "Simula el sonido de eco de cinta de estado sólido.",
         "paramsHtml": "<strong>Mix:</strong> Controla la relación de señal wet/dry<br>\r\n<strong>Feedback:</strong> Controla la cantidad de retroalimentación<br>\r\n<strong>Time:</strong> Controla el tiempo de retardo del canal izquierdo<br>\r\n<strong>Sync:</strong> Activa/desactiva la sincronización de Tap Tempo<br>\r\n<strong>Trail:</strong> Activa/desactiva el rastro del efecto cuando el efecto se omite",
         "type": "Type: Delay",
-        "searchText": "Analog Simula el sonido de eco de cinta de estado sólido. Mix: Controla la relación de señal wet/dry Feedback: Controla la cantidad de retroalimentación Time: Controla el tiempo de retardo del canal izquierdo Sync: Activa/desactiva la sincronización de Tap Tempo Trail: Activa/desactiva el rastro del efecto cuando el efecto se omite Type: Delay"
+        "searchText": "Analog Simula el sonido de eco de cinta de estado sólido. Mix: Controla la relación de señal wet/dry Feedback: Controla la cantidad de retroalimentación Time: Controla el tiempo de retardo del canal izquierdo Sync: Activa/desactiva la sincronización de Tap Tempo Trail: Activa/desactiva el rastro del efecto cuando el efecto se omite Type: Delay",
+        "inspiration": "Solid-state tape echo / Echoplex-style delay",
+        "musicalTags": [
+          "Ambient",
+          "Vintage",
+          "Tape"
+        ],
+        "recommendedUse": "Repeticiones tipo tape con caracter analogico para solos clasicos y partes ambient.",
+        "needTags": [
+          "ambient",
+          "lead"
+        ]
       },
       {
         "name": "Tape",
@@ -2531,7 +2943,18 @@
         "descriptionHtml": "Este pedal de retardo análogo se vendió de 1981 a 1984 y todavía es buscado gracias a su sonido cálido y natural. Produce un tiempo de retardo que oscila entre 20 y 300 milisegundos.",
         "paramsHtml": "<strong>Mix:</strong> Controla la relación de señal wet/dry<br>\r\n<strong>Feedback:</strong> Controla la cantidad de retroalimentación<br>\r\n<strong>Time:</strong> Controla el tiempo de retardo del canal izquierdo<br>\r\n<strong>Sync:</strong> Activa/desactiva la sincronización de Tap Tempo<br>\r\n<strong>Trail:</strong> Activa/desactiva el rastro del efecto cuando el efecto se omite",
         "type": "Type: Delay",
-        "searchText": "M-Echo Este pedal de retardo análogo se vendió de 1981 a 1984 y todavía es buscado gracias a su sonido cálido y natural. Produce un tiempo de retardo que oscila entre 20 y 300 milisegundos. Mix: Controla la relación de señal wet/dry Feedback: Controla la cantidad de retroalimentación Time: Controla el tiempo de retardo del canal izquierdo Sync: Activa/desactiva la sincronización de Tap Tempo Trail: Activa/desactiva el rastro del efecto cuando el efecto se omite Type: Delay"
+        "searchText": "M-Echo Este pedal de retardo análogo se vendió de 1981 a 1984 y todavía es buscado gracias a su sonido cálido y natural. Produce un tiempo de retardo que oscila entre 20 y 300 milisegundos. Mix: Controla la relación de señal wet/dry Feedback: Controla la cantidad de retroalimentación Time: Controla el tiempo de retardo del canal izquierdo Sync: Activa/desactiva la sincronización de Tap Tempo Trail: Activa/desactiva el rastro del efecto cuando el efecto se omite Type: Delay",
+        "inspiration": "Boss DM-2 analog delay style",
+        "musicalTags": [
+          "Ambient",
+          "Analog",
+          "Lead"
+        ],
+        "recommendedUse": "Repeticiones oscuras que se acomodan detras de ritmicas y leads sin ensuciar la mezcla.",
+        "needTags": [
+          "ambient",
+          "lead"
+        ]
       },
       {
         "name": "Sweet Echo",
@@ -2603,7 +3026,19 @@
         "descriptionHtml": "This is a creative delay\r\neffect focused on “breaking\r\nconventions”. It produces\r\na “fragmented” sound\r\ncharacterized by stutters,\r\njumps, and granularity,\r\nsimulating effects like\r\n“signal glitches” or “device\r\nfreezes”.",
         "paramsHtml": "<strong>Mix:</strong> Controla la relación de señal wet/dry<br>\r\n<strong>Time:</strong> Controls the delay time<br>\r\n<strong>Feedback:</strong> Controla la cantidad de retroalimentación<br>\r\n<strong>Latch:</strong> Controla la duración del glitch; 0=sin glitch<br>\r\n<strong>Cut:</strong> Controla la velocidad del glitch; 0=sin glitch<br>\r\n<strong>Sync:</strong> Activa/desactiva la sincronización de Tap Tempo<br>\r\n<strong>Trail:</strong> Activa/desactiva el rastro del efecto cuando el efecto se omite",
         "type": "Type: Delay",
-        "searchText": "Broken Delay This is a creative delay effect focused on “breaking conventions”. It produces a “fragmented” sound characterized by stutters, jumps, and granularity, simulating effects like “signal glitches” or “device freezes”. Mix: Controla la relación de señal wet/dry Time: Controls the delay time Feedback: Controla la cantidad de retroalimentación Latch: Controla la duración del glitch; 0=sin glitch Cut: Controla la velocidad del glitch; 0=sin glitch Sync: Activa/desactiva la sincronización de Tap Tempo Trail: Activa/desactiva el rastro del efecto cuando el efecto se omite Type: Delay"
+        "searchText": "Broken Delay This is a creative delay effect focused on “breaking conventions”. It produces a “fragmented” sound characterized by stutters, jumps, and granularity, simulating effects like “signal glitches” or “device freezes”. Mix: Controla la relación de señal wet/dry Time: Controls the delay time Feedback: Controla la cantidad de retroalimentación Latch: Controla la duración del glitch; 0=sin glitch Cut: Controla la velocidad del glitch; 0=sin glitch Sync: Activa/desactiva la sincronización de Tap Tempo Trail: Activa/desactiva el rastro del efecto cuando el efecto se omite Type: Delay",
+        "musicalTags": [
+          "Experimental",
+          "Ambient",
+          "Glitch"
+        ],
+        "recommendedUse": "Sirve para repeticiones rotas, acentos glitch y transiciones poco convencionales.",
+        "inspiration": "Glitch delay style",
+        "suggestedPosition": "Despues de MOD / antes de RVB",
+        "needTags": [
+          "experimental",
+          "ambient"
+        ]
       }
     ],
     "rvb": [
@@ -2614,7 +3049,19 @@
         "descriptionHtml": "Simula la amplitud de una habitación.",
         "paramsHtml": "<strong>Mix:</strong> Controla la relación de señal wet/dry<br>\r\n<strong>Pre Delay:</strong> Controla la cantidad de tiempo entre la señal seca y el inicio audible de reflexiones tempranas y la cola de reverb<br>\r\n<strong>Decay:</strong> Controla la duración del tiempo de reverb<br>\r\n<strong>Trail:</strong> Activa/desactiva el rastro del efecto cuando el efecto se omite",
         "type": "Type: Reverb",
-        "searchText": "Room Simula la amplitud de una habitación. Mix: Controla la relación de señal wet/dry Pre Delay: Controla la cantidad de tiempo entre la señal seca y el inicio audible de reflexiones tempranas y la cola de reverb Decay: Controla la duración del tiempo de reverb Trail: Activa/desactiva el rastro del efecto cuando el efecto se omite Type: Reverb"
+        "searchText": "Room Simula la amplitud de una habitación. Mix: Controla la relación de señal wet/dry Pre Delay: Controla la cantidad de tiempo entre la señal seca y el inicio audible de reflexiones tempranas y la cola de reverb Decay: Controla la duración del tiempo de reverb Trail: Activa/desactiva el rastro del efecto cuando el efecto se omite Type: Reverb",
+        "musicalTags": [
+          "Clean",
+          "Rhythm",
+          "Natural"
+        ],
+        "recommendedUse": "Usalo sutil para que un preset seco se sienta mas real sin lavarlo de reverb.",
+        "inspiration": "Small room ambience",
+        "suggestedPosition": "Despues del DLY / final",
+        "needTags": [
+          "clean",
+          "rhythm"
+        ]
       },
       {
         "name": "Hall",
@@ -2623,7 +3070,20 @@
         "descriptionHtml": "Simula la amplitud de una sala de actuaciones.",
         "paramsHtml": "<strong>Mix:</strong> Controla la relación de señal wet/dry<br>\r\n<strong>Pre Delay:</strong> Controla la cantidad de tiempo entre la señal seca y el inicio audible de reflexiones tempranas y la cola de reverb<br>\r\n<strong>Decay:</strong> Controla la duración del tiempo de reverb<br>\r\n<strong>Trail:</strong> Activa/desactiva el rastro del efecto cuando el efecto se omite",
         "type": "Type: Reverb",
-        "searchText": "Hall Simula la amplitud de una sala de actuaciones. Mix: Controla la relación de señal wet/dry Pre Delay: Controla la cantidad de tiempo entre la señal seca y el inicio audible de reflexiones tempranas y la cola de reverb Decay: Controla la duración del tiempo de reverb Trail: Activa/desactiva el rastro del efecto cuando el efecto se omite Type: Reverb"
+        "searchText": "Hall Simula la amplitud de una sala de actuaciones. Mix: Controla la relación de señal wet/dry Pre Delay: Controla la cantidad de tiempo entre la señal seca y el inicio audible de reflexiones tempranas y la cola de reverb Decay: Controla la duración del tiempo de reverb Trail: Activa/desactiva el rastro del efecto cuando el efecto se omite Type: Reverb",
+        "musicalTags": [
+          "Ambient",
+          "Lead",
+          "Clean"
+        ],
+        "recommendedUse": "Bueno para solos espaciosos y limpios grandes cuando Plate o Room quedan chicos.",
+        "inspiration": "Concert hall reverb",
+        "suggestedPosition": "Final de cadena",
+        "needTags": [
+          "ambient",
+          "lead",
+          "clean"
+        ]
       },
       {
         "name": "Church",
@@ -2713,7 +3173,44 @@
         "descriptionHtml": "Produce un efecto de reverb rico y centelleante.",
         "paramsHtml": "<strong>Mix:</strong> Controla la relación de señal wet/dry<br>\r\n<strong>Pre Delay:</strong> Controla la cantidad de tiempo entre la señal seca y el inicio audible de reflexiones tempranas y la cola de reverb<br>\r\n<strong>Decay:</strong> Controla la duración del tiempo de reverb<br>\r\n<strong>Low End:</strong> Controla la cantidad de frecuencia baja<br>\r\n<strong>High End:</strong> Controla la frecuencia del filtro paso-altos<br>\r\n<strong>Trail:</strong> Activa/desactiva el rastro del efecto cuando el efecto se omite",
         "type": "Type: Reverb",
-        "searchText": "Shimmer Produce un efecto de reverb rico y centelleante. Mix: Controla la relación de señal wet/dry Pre Delay: Controla la cantidad de tiempo entre la señal seca y el inicio audible de reflexiones tempranas y la cola de reverb Decay: Controla la duración del tiempo de reverb Low End: Controla la cantidad de frecuencia baja High End: Controla la frecuencia del filtro paso-altos Trail: Activa/desactiva el rastro del efecto cuando el efecto se omite Type: Reverb"
+        "searchText": "Shimmer Produce un efecto de reverb rico y centelleante. Mix: Controla la relación de señal wet/dry Pre Delay: Controla la cantidad de tiempo entre la señal seca y el inicio audible de reflexiones tempranas y la cola de reverb Decay: Controla la duración del tiempo de reverb Low End: Controla la cantidad de frecuencia baja High End: Controla la frecuencia del filtro paso-altos Trail: Activa/desactiva el rastro del efecto cuando el efecto se omite Type: Reverb",
+        "musicalTags": [
+          "Ambient",
+          "Shoegaze",
+          "Experimental"
+        ],
+        "recommendedUse": "Usalo para pads, swells, limpios cinematicos y capas estilo shoegaze.",
+        "inspiration": "Shimmer reverb style",
+        "suggestedPosition": "Final de cadena",
+        "needTags": [
+          "ambient",
+          "experimental",
+          "clean"
+        ]
+      }
+    ],
+    "vol": [
+      {
+        "name": "Volume",
+        "className": "fx-card vol-card",
+        "image": "/img/GP200.png",
+        "descriptionHtml": "Control puro de volumen. Sirve como bloque simple de nivel para swells, mute, balancear presets o controlar volumen con pedal de expresion.",
+        "paramsHtml": "<strong>Volume:</strong> Controla el volumen de salida",
+        "type": "Type: Volume",
+        "searchText": "Volume Control puro de volumen pedal de expresion swells mute balancear presets volumen de salida Type Volume",
+        "musicalTags": [
+          "Control",
+          "Swells",
+          "Utilidad"
+        ],
+        "recommendedUse": "Ponelo antes del delay para swells o al final para controlar el nivel general del preset.",
+        "inspiration": "Volume pedal utility",
+        "suggestedPosition": "Flexible / final de cadena",
+        "needTags": [
+          "ambient",
+          "clean",
+          "rhythm"
+        ]
       }
     ]
   },
