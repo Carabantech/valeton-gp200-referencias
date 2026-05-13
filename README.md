@@ -1,174 +1,131 @@
-# Valeton GP-200 Tone Reference 🎸
+# Valeton GP-200 Tone Reference
 
-Una **referencia visual y bilingüe completa** de todos los efectos, amplificadores, gabinetes y características del procesador de efectos **Valeton GP-200**.
+Referencia visual bilingue para explorar los efectos, amplificadores, gabinetes y guias de uso del procesador Valeton GP-200.
 
-## 📋 Descripción del Proyecto
+El proyecto fue migrado desde HTML estatico a Next.js para que sea mas facil mantener el contenido, agregar nuevos efectos por categoria y evitar que las descripciones o parametros se superpongan sobre las imagenes.
 
-Este proyecto es un sitio web interactivo que proporciona una guía exhaustiva de los ~200+ efectos disponibles en el Valeton GP-200, incluyendo:
+## Caracteristicas
 
-- **Descripciones detalladas** de cada efecto en español e inglés
-- **Imágenes de referencia** para cada efecto
-- **Parámetros explicados** y sus funciones
-- **Guías tutoriales** para carga de IRs y perfiles NAM
-- **Actualizaciones de firmware** y procedimientos
+- App Next.js con rutas por idioma: `/es` y `/en`.
+- Busqueda en tiempo real por nombre, descripcion, parametros y tipo de efecto.
+- Tabs por categoria: `PRE`, `WAH`, `DST`, `AMP`, `NR`, `CAB`, `EQ`, `MOD`, `DLY`, `RVB` y `GUIAS`.
+- Cada efecto se renderiza como una tarjeta independiente con imagen, descripcion, parametros y tipo.
+- Contenido bilingue en archivos JSON editables.
+- Assets servidos desde `public/img` y `public/temps`.
 
-## 🌐 Características Principales
+## Estructura
 
-### Idiomas Soportados
-- 🇬🇧 **English** (version.html)
-- 🇪🇸 **Español** (index-es.html)
-- Selector de idioma bidireccional con navegación rápida
-
-### Secciones Disponibles (11 Total)
-
-| Sección | Descripción | Cantidad |
-|---------|-------------|----------|
-| **VIEW** | Guías de usuario (Firmware, IR Loading, NAM) | 3 guías |
-| **PRE** | Compresores, boosts, overdrives, filtros | 31 efectos |
-| **WAH** | Efectos wah-wah (pedalera expresiva) | 5 efectos |
-| **DST** | Distorsiones y sobrecarga | 35+ efectos |
-| **AMP** | Simuladores de amplificadores y preamps | 60+ modelos |
-| **NR** | Noise reduction y gates | 4 efectos |
-| **CAB** | Cabinetes e IR loader | 77 cabinetes |
-| **EQ** | Ecualizadores (5-band, 10-band, etc) | 5 ecualizadores |
-| **MOD** | Modulación (chorus, flanger, phaser, etc) | 25+ efectos |
-| **DLY** | Delays y ecos | 25+ efectos |
-| **RVB** | Reverbs | 12+ efectos |
-
-### Tecnología
-
-- **HTML5** - Estructura semántica
-- **CSS3 Glassmorphism** - Diseño moderno con efecto vidrio esmerilado
-- **Vanilla JavaScript** - Sin dependencias externas
-- **Favicon SVG** - Logo personalizado en pestaña del navegador
-- **Responsive Design** - Optimizado para desktop, tablet y móvil
-- **UTF-8 Encoding** - Soporte completo para caracteres especiales en español
-
-## 🎯 Características Destacadas
-
-### Interfaz Intuitiva
-- Tabs navegables para cada sección de efectos
-- Búsqueda en tiempo real de efectos
-- Imágenes de referencia visual para cada efecto
-- Descripción clara de parámetros ajustables
-
-### Contenido Bilingüe
-- ✅ ~200+ efectos traducidos a español
-- ✅ ~150+ parámetros con descripciones en español
-- ✅ Guías tutoriales completas en ambos idiomas
-- ✅ Mantiene nombres de parámetros en inglés (estándar de la industria)
-
-### Diseño Moderno
-- Gradiente oscuro elegante (navy/slate)
-- Efecto glassmorphism con `backdrop-filter: blur(16px)`
-- Animaciones suaves en hover
-- Breakpoint responsive en 700px
-
-## 📁 Estructura del Proyecto
-
-```
+```text
 valeton-gp200-reference/
-├── index.html              # Versión en inglés
-├── index-es.html           # Versión en español
-├── README.md              # Este archivo
-├── img/                   # Imágenes e iconos de tabs
-│   ├── icon_PRE.png
-│   ├── icon_DST.png
-│   ├── ... (más iconos)
-└── temps/                 # Imágenes de referencia de efectos
-    ├── amp/
-    ├── cab/
-    ├── dly/
-    ├── dst/
-    ├── eq/
-    ├── mod/
-    ├── nr/
-    ├── pre/
-    ├── rvb/
-    └── wah/
+├── app/                    # App Router de Next.js
+│   ├── [locale]/page.tsx   # Paginas /es y /en
+│   ├── globals.css         # Estilos globales
+│   ├── layout.tsx
+│   └── page.tsx            # Redireccion a /es
+├── components/
+│   └── ValetonApp.tsx      # UI principal: hero, tabs, guias y tarjetas
+├── data/
+│   ├── en.json             # Contenido ingles
+│   └── es.json             # Contenido espanol
+├── public/
+│   ├── img/                # Iconos y foto de la unidad
+│   └── temps/              # Imagenes de referencia por categoria
+├── scripts/
+│   └── extract-content.mjs # Extractor desde los HTML originales
+├── types/
+│   └── content.ts          # Tipos del contenido
+├── index.html              # Fuente HTML original en ingles
+└── index-es.html           # Fuente HTML original en espanol
 ```
 
-## 🚀 Cómo Usar
+## Desarrollo
 
-### En Navegador
-1. Abre `index.html` en tu navegador para la versión en inglés
-2. Abre `index-es.html` para la versión en español
-3. Usa el selector de idioma en la parte superior para cambiar entre versiones
-4. Navega por las secciones con los tabs
-5. Busca un efecto por nombre en el campo de búsqueda
+Instalar dependencias:
 
-### Búsqueda de Efectos
-- Escribe el nombre del efecto (ej: "Tube Delay", "Hall Reverb")
-- Los resultados se filtran en tiempo real
-- Funciona en ambos idiomas
+```bash
+npm install
+```
 
-## 📚 Guías Incluidas
+Levantar el servidor local:
 
-### 1. Firmware Update Guide
-Pasos para actualizar el firmware de tu GP-200 de forma segura
+```bash
+npm run dev
+```
 
-### 2. IR Loading Guide
-Cómo cargar impulse responses (IRs) personalizados para cabinetes
+Abrir:
 
-### 3. NAM Profile Loading Guide
-Cómo cargar perfiles NAM (Neural Amp Modeler) desde la comunidad
+- Espanol: `http://127.0.0.1:3000/es`
+- English: `http://127.0.0.1:3000/en`
 
-## 🔧 Detalles Técnicos
+Compilar para produccion:
 
-- **Favicon**: SVG embebido (sin archivos externos)
-- **Charset**: UTF-8 para soporte de caracteres especiales españoles (ñ, á, é, í, ó, ú)
-- **Viewport**: Responsive con `viewport` meta tag
-- **Color Scheme**: Tema oscuro (dark mode) optimizado para la vista
+```bash
+npm run build
+```
 
-### Colores Principales
-- **Background**: Gradiente `#0f172a` → `#111827` → `#1e293b`
-- **Text**: `#f1f5f9` (blanco suave)
-- **Accent**: `#cbd5e1` (gris claro para detalles)
+## Como Agregar Un Nuevo Efecto
 
-## 💾 Historial de Traducciones
+Los efectos viven dentro de `data/es.json` y `data/en.json`, agrupados por categoria en `sections`.
 
-Todo el proyecto ha sido traducido al español manteniendo:
-- ✅ Descripciones de efectos en español
-- ✅ Descripciones de parámetros en español
-- ✅ Guías tutoriales en español
-- ✅ Nombres de parámetros en inglés (convención estándar)
+Por ejemplo, para agregar un nuevo efecto en `PRE`:
 
-### Commits de Traducción
-- VIEW: Guías (Firmware, IR, NAM)
-- PRE: 31 efectos de preamp
-- WAH: 5 wah pedals
-- DST: 35+ distorsiones
-- AMP: 60+ amplificadores
-- NR: 4 noise reduction
-- CAB: 77 cabinetes/IRs
-- EQ: 5 ecualizadores
-- MOD: 25+ modulaciones
-- DLY: 25+ delays
-- RVB: 12+ reverbs
-- Favicon: Logo GP-200
+1. Abrir `data/es.json`.
+2. Buscar `sections.pre`.
+3. Copiar un objeto de efecto existente.
+4. Cambiar estos campos:
+   - `name`: nombre del efecto.
+   - `className`: usar la categoria correspondiente, por ejemplo `fx-card pre-card`.
+   - `image`: ruta de la imagen en `public/temps/pre/...`.
+   - `descriptionHtml`: descripcion del efecto.
+   - `paramsHtml`: parametros en HTML simple.
+   - `type`: etiqueta visible, por ejemplo `Type: Comp`.
+   - `searchText`: texto usado por la busqueda.
+5. Repetir el mismo efecto traducido en `data/en.json`.
 
-## 🎓 Para Usuarios del GP-200
+Ejemplo:
 
-Este sitio es ideal si:
-- ✅ Quieres explorar todos los efectos disponibles
-- ✅ Necesitas recordar qué hace cada parámetro
-- ✅ Buscas inspiración sonora
-- ✅ Estás aprendiendo a usar tu GP-200
-- ✅ Prefieres contenido en español
+```json
+{
+  "name": "Nuevo Comp",
+  "className": "fx-card pre-card",
+  "image": "/temps/pre/Nuevo Comp.png",
+  "descriptionHtml": "Descripcion del nuevo efecto.",
+  "paramsHtml": "<strong>Sustain:</strong> Controla la compresion<br><strong>Volume:</strong> Controla el nivel",
+  "type": "Type: Comp",
+  "searchText": "Nuevo Comp Descripcion del nuevo efecto Sustain Controla la compresion Volume Controla el nivel Type Comp"
+}
+```
 
-## 📄 Licencia
+Si la imagen es nueva, colocarla en la carpeta correspondiente dentro de `public/temps`.
 
-Referencia educativa para usuarios del Valeton GP-200.
+## Extractor Desde HTML
 
-## 🤝 Contribuciones
+El script `scripts/extract-content.mjs` puede regenerar `data/en.json` y `data/es.json` desde `index.html` e `index-es.html`.
 
-¿Encontraste errores en las traducciones? ¿Tienes sugerencias de mejora?
+```bash
+node scripts/extract-content.mjs
+```
 
-Puedes contribuir mediante:
-- Issues para reportar errores
-- Pull requests con mejoras
-- Sugerencias en las discussions
+Usarlo solamente si los HTML originales se actualizaron y se quiere volver a extraer el contenido. Si el contenido ya se esta editando directamente en `data/*.json`, correr el extractor puede pisar esos cambios.
 
----
+## Conteo Actual
 
-**Made for GP-200 users by the community** 🎸🎵
+| Categoria | Cantidad |
+|---|---:|
+| PRE | 31 |
+| WAH | 6 |
+| DST | 39 |
+| AMP | 72 |
+| NR | 4 |
+| CAB | 71 |
+| EQ | 6 |
+| MOD | 27 |
+| DLY | 22 |
+| RVB | 12 |
+| GUIAS | 3 |
+
+## Notas
+
+- Los HTML originales se conservan como referencia historica y como fuente para el extractor.
+- La UI nueva ya no posiciona texto encima de las imagenes, por lo que las descripciones largas no deberian superponerse.
+- Los scripts `translate_*.py` son utilidades de traduccion previas y no forman parte del flujo principal de Next.js.
