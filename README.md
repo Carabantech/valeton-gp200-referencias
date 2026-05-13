@@ -127,4 +127,6 @@ Si la imagen es nueva, colocarla en la carpeta correspondiente dentro de `public
 
 Proyecto creado y mantenido por Carabantech.
 
+Portfolio: https://portfoliocarabantech.netlify.app/
+
 GitHub: https://github.com/Carabantech

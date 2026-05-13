@@ -358,6 +358,16 @@ function DonationSection({ locale }: { locale: ValetonContent["locale"] }) {
           <img src="/img/qr-bitso.jpeg" alt={isSpanish ? "QR para donacion cripto" : "Crypto donation QR"} />
           <span>{isSpanish ? "Cripto por QR" : "Crypto by QR"}</span>
         </div>
+
+        <a
+          href="https://portfoliocarabantech.netlify.app/"
+          rel="noopener"
+          target="_blank"
+          className="profile-link"
+        >
+          <span>{isSpanish ? "Ver perfil" : "View profile"}</span>
+          <strong>Carabantech</strong>
+        </a>
       </div>
     </section>
   );
