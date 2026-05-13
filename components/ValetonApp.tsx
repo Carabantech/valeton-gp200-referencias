@@ -120,6 +120,8 @@ export function ValetonApp({ content }: ValetonAppProps) {
           );
         })}
 
+      <DonationSection locale={content.locale} />
+
       <div className="footer" dangerouslySetInnerHTML={{ __html: content.footer }} />
     </div>
   );
@@ -323,6 +325,39 @@ function GuideSection({
             <div className="guide-body" dangerouslySetInnerHTML={{ __html: guide.bodyHtml }} />
           </article>
         ))}
+      </div>
+    </section>
+  );
+}
+
+function DonationSection({ locale }: { locale: ValetonContent["locale"] }) {
+  const isSpanish = locale === "es";
+
+  return (
+    <section className="donation-panel" aria-label={isSpanish ? "Donaciones" : "Donations"}>
+      <div className="donation-copy">
+        <p>{isSpanish ? "Apoyar el proyecto" : "Support the project"}</p>
+        <h2>{isSpanish ? "Te sirvio el manual?" : "Did this manual help?"}</h2>
+        <span>
+          {isSpanish
+            ? "Si queres colaborar con este manual online, podes invitarme un cafe o enviar cripto por QR."
+            : "If you want to support this online manual, you can buy me a coffee or send crypto by QR."}
+        </span>
+      </div>
+
+      <div className="donation-actions">
+        <a href="https://cafecito.app/carabantech" rel="noopener" target="_blank" className="cafecito-link">
+          <img
+            srcSet="https://cdn.cafecito.app/imgs/buttons/button_6.png 1x, https://cdn.cafecito.app/imgs/buttons/button_6_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_6_3.75x.png 3.75x"
+            src="https://cdn.cafecito.app/imgs/buttons/button_6.png"
+            alt={isSpanish ? "Invitame un cafe en cafecito.app" : "Buy me a coffee on cafecito.app"}
+          />
+        </a>
+
+        <div className="crypto-donation">
+          <img src="/img/qr-bitso.jpeg" alt={isSpanish ? "QR para donacion cripto" : "Crypto donation QR"} />
+          <span>{isSpanish ? "Cripto por QR" : "Crypto by QR"}</span>
+        </div>
       </div>
     </section>
   );
