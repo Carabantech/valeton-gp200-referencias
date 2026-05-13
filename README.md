@@ -2,11 +2,11 @@
 
 Referencia visual bilingue para explorar los efectos, amplificadores, gabinetes y guias de uso del procesador Valeton GP-200.
 
-El proyecto fue migrado desde HTML estatico a Next.js para que sea mas facil mantener el contenido, agregar nuevos efectos por categoria y evitar que las descripciones o parametros se superpongan sobre las imagenes.
+El proyecto corre como una app Next.js. El contenido esta separado en JSON por idioma para que sea facil agregar nuevos efectos por categoria y mantener las tarjetas sin superposiciones de texto.
 
 ## Caracteristicas
 
-- App Next.js con rutas por idioma: `/es` y `/en`.
+- Rutas por idioma: `/es` y `/en`.
 - Busqueda en tiempo real por nombre, descripcion, parametros y tipo de efecto.
 - Tabs por categoria: `PRE`, `WAH`, `DST`, `AMP`, `NR`, `CAB`, `EQ`, `MOD`, `DLY`, `RVB` y `GUIAS`.
 - Cada efecto se renderiza como una tarjeta independiente con imagen, descripcion, parametros y tipo.
@@ -17,25 +17,23 @@ El proyecto fue migrado desde HTML estatico a Next.js para que sea mas facil man
 
 ```text
 valeton-gp200-reference/
-├── app/                    # App Router de Next.js
-│   ├── [locale]/page.tsx   # Paginas /es y /en
-│   ├── globals.css         # Estilos globales
-│   ├── layout.tsx
-│   └── page.tsx            # Redireccion a /es
-├── components/
-│   └── ValetonApp.tsx      # UI principal: hero, tabs, guias y tarjetas
-├── data/
-│   ├── en.json             # Contenido ingles
-│   └── es.json             # Contenido espanol
-├── public/
-│   ├── img/                # Iconos y foto de la unidad
-│   └── temps/              # Imagenes de referencia por categoria
-├── scripts/
-│   └── extract-content.mjs # Extractor desde los HTML originales
-├── types/
-│   └── content.ts          # Tipos del contenido
-├── index.html              # Fuente HTML original en ingles
-└── index-es.html           # Fuente HTML original en espanol
+|-- app/
+|   |-- [locale]/page.tsx   # Paginas /es y /en
+|   |-- globals.css         # Estilos globales
+|   |-- layout.tsx
+|   `-- page.tsx            # Redireccion a /es
+|-- components/
+|   `-- ValetonApp.tsx      # UI principal
+|-- data/
+|   |-- en.json             # Contenido ingles
+|   `-- es.json             # Contenido espanol
+|-- public/
+|   |-- img/                # Iconos y foto de la unidad
+|   `-- temps/              # Imagenes de referencia por categoria
+|-- types/
+|   `-- content.ts          # Tipos del contenido
+|-- package.json
+`-- README.md
 ```
 
 ## Desarrollo
@@ -98,16 +96,6 @@ Ejemplo:
 
 Si la imagen es nueva, colocarla en la carpeta correspondiente dentro de `public/temps`.
 
-## Extractor Desde HTML
-
-El script `scripts/extract-content.mjs` puede regenerar `data/en.json` y `data/es.json` desde `index.html` e `index-es.html`.
-
-```bash
-node scripts/extract-content.mjs
-```
-
-Usarlo solamente si los HTML originales se actualizaron y se quiere volver a extraer el contenido. Si el contenido ya se esta editando directamente en `data/*.json`, correr el extractor puede pisar esos cambios.
-
 ## Conteo Actual
 
 | Categoria | Cantidad |
@@ -126,6 +114,6 @@ Usarlo solamente si los HTML originales se actualizaron y se quiere volver a ext
 
 ## Notas
 
-- Los HTML originales se conservan como referencia historica y como fuente para el extractor.
-- La UI nueva ya no posiciona texto encima de las imagenes, por lo que las descripciones largas no deberian superponerse.
-- Los scripts `translate_*.py` son utilidades de traduccion previas y no forman parte del flujo principal de Next.js.
+- El proyecto ya no conserva los HTML estaticos originales ni carpetas duplicadas de assets.
+- La UI no posiciona texto encima de las imagenes, por lo que las descripciones largas no deberian superponerse.
+- El flujo principal de mantenimiento es editar `data/es.json`, `data/en.json` y agregar imagenes nuevas en `public/temps`.
