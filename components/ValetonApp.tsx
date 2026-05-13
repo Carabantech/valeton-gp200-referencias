@@ -373,19 +373,7 @@ function ProjectNotice({
           </span>
         </div>
 
-        <div className="notice-actions">
-          <a href="https://cafecito.app/carabantech" rel="noopener" target="_blank" className="cafecito-link">
-            <img
-              srcSet="https://cdn.cafecito.app/imgs/buttons/button_6.png 1x, https://cdn.cafecito.app/imgs/buttons/button_6_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_6_3.75x.png 3.75x"
-              src="https://cdn.cafecito.app/imgs/buttons/button_6.png"
-              alt={isSpanish ? "Invitame un cafe en cafecito.app" : "Buy me a coffee on cafecito.app"}
-            />
-          </a>
-          <button type="button" className="crypto-donation crypto-button" onClick={onOpenQr}>
-            <img src="/img/qr-bitso.jpeg" alt="" aria-hidden="true" />
-            <span>{isSpanish ? "Ver QR cripto" : "View crypto QR"}</span>
-          </button>
-        </div>
+        <DonationActions locale={locale} onOpenQr={onOpenQr} />
 
         <button type="button" className="notice-close" onClick={onClose}>
           {isSpanish ? "Entrar al manual" : "Enter manual"}
@@ -423,21 +411,40 @@ function DonationSection({ locale, onOpenQr }: { locale: ValetonContent["locale"
         </span>
       </div>
 
-      <div className="donation-actions">
-        <a href="https://cafecito.app/carabantech" rel="noopener" target="_blank" className="cafecito-link">
-          <img
-            srcSet="https://cdn.cafecito.app/imgs/buttons/button_6.png 1x, https://cdn.cafecito.app/imgs/buttons/button_6_2x.png 2x, https://cdn.cafecito.app/imgs/buttons/button_6_3.75x.png 3.75x"
-            src="https://cdn.cafecito.app/imgs/buttons/button_6.png"
-            alt={isSpanish ? "Invitame un cafe en cafecito.app" : "Buy me a coffee on cafecito.app"}
-          />
-        </a>
-
-        <button type="button" className="crypto-donation crypto-button" onClick={onOpenQr}>
-          <img src="/img/qr-bitso.jpeg" alt="" aria-hidden="true" />
-          <span>{isSpanish ? "Cripto por QR" : "Crypto by QR"}</span>
-        </button>
-      </div>
+      <DonationActions locale={locale} onOpenQr={onOpenQr} />
     </section>
+  );
+}
+
+function DonationActions({ locale, onOpenQr }: { locale: ValetonContent["locale"]; onOpenQr: () => void }) {
+  const isSpanish = locale === "es";
+
+  return (
+    <div className="donation-actions">
+      <a href="https://cafecito.app/carabantech" rel="noopener" target="_blank" className="donation-button">
+        <span className="donation-mark">Cafe</span>
+        <span className="donation-text">
+          <strong>{isSpanish ? "Invitame un cafe" : "Buy me a coffee"}</strong>
+          <small>{isSpanish ? "Abrir Cafecito" : "Open Cafecito"}</small>
+        </span>
+        <img
+          className="cafecito-badge"
+          src="https://cdn.cafecito.app/imgs/buttons/button_6.svg"
+          alt={isSpanish ? "Invitame un cafe en cafecito.app" : "Buy me a coffee on cafecito.app"}
+        />
+      </a>
+
+      <button type="button" className="donation-button" onClick={onOpenQr}>
+        <span className="donation-mark">QR</span>
+        <span className="donation-text">
+          <strong>{isSpanish ? "Donar cripto" : "Donate crypto"}</strong>
+          <small>{isSpanish ? "Mostrar QR grande" : "Show large QR"}</small>
+        </span>
+        <span className="qr-preview" aria-hidden="true">
+          <img src="/img/qr-bitso.jpeg" alt="" />
+        </span>
+      </button>
+    </div>
   );
 }
 

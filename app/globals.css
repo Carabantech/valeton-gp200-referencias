@@ -723,56 +723,100 @@ button {
   justify-content: flex-end;
 }
 
-.cafecito-link,
-.crypto-donation {
+.donation-button {
+  position: relative;
   display: grid;
-  place-items: center;
-  min-height: 84px;
-  padding: 10px;
-  background: rgba(15, 23, 42, 0.42);
+  grid-template-columns: 44px minmax(120px, 1fr);
+  grid-template-rows: auto auto;
+  gap: 9px 12px;
+  align-items: center;
+  width: 240px;
+  min-height: 118px;
+  padding: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  color: var(--text);
+  background:
+    linear-gradient(135deg, rgba(96, 165, 250, 0.14), rgba(15, 23, 42, 0.52)),
+    rgba(15, 23, 42, 0.58);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 14px;
+  text-align: left;
+  text-decoration: none;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
 }
 
-.cafecito-link,
-.crypto-button {
-  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
-}
-
-.cafecito-link:hover,
-.crypto-button:hover {
+.donation-button:hover {
   transform: translateY(-1px);
-  background: rgba(96, 165, 250, 0.16);
+  background:
+    linear-gradient(135deg, rgba(96, 165, 250, 0.22), rgba(15, 23, 42, 0.5)),
+    rgba(15, 23, 42, 0.66);
   border-color: rgba(147, 197, 253, 0.58);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.28);
 }
 
-.cafecito-link img {
+.donation-mark {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  color: #dbeafe;
+  background: rgba(96, 165, 250, 0.2);
+  border: 1px solid rgba(147, 197, 253, 0.36);
+  border-radius: 12px;
+  font-size: 0.68rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.donation-text {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.donation-text strong {
+  font-size: 0.98rem;
+  line-height: 1.15;
+}
+
+.donation-text small {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.cafecito-badge {
+  grid-column: 1 / -1;
   display: block;
-  width: min(220px, 58vw);
-  height: auto;
+  width: 100%;
+  max-width: 190px;
+  height: 31px;
+  object-fit: contain;
+  justify-self: start;
 }
 
-.crypto-donation {
+.qr-preview {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
   gap: 8px;
-}
-
-.crypto-button {
-  cursor: pointer;
-}
-
-.crypto-donation img {
-  display: block;
-  width: 112px;
-  aspect-ratio: 1;
-  object-fit: cover;
-  background: white;
-  border-radius: 10px;
-}
-
-.crypto-donation span {
   color: var(--accent-text);
   font-size: 0.76rem;
   font-weight: 800;
+}
+
+.qr-preview::after {
+  content: "Click";
+}
+
+.qr-preview img {
+  display: block;
+  width: 38px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: white;
+  border-radius: 8px;
 }
 
 .footer {
