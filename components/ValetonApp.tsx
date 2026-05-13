@@ -170,6 +170,7 @@ function Hero({
         <div>
           <p className="eyebrow">Valeton GP-200</p>
           <h1>{content.hero.title}</h1>
+          {content.hero.subtitle ? <p className="hero-subtitle">{content.hero.subtitle}</p> : null}
         </div>
         <img src={content.hero.image} className="hero-unit" alt="Valeton GP-200" />
       </div>

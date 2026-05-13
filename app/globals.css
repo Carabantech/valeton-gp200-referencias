@@ -117,6 +117,15 @@ button {
   line-height: 1.05;
 }
 
+.hero-subtitle {
+  max-width: 720px;
+  margin-top: 9px;
+  color: var(--accent-text);
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
 .hero-copy {
   max-width: 760px;
   margin-top: 12px;

@@ -2,6 +2,7 @@
   "locale": "en",
   "hero": {
     "title": "Valeton GP-200 Tone Reference",
+    "subtitle": "Also useful as a guide for GP-100, GP-100VT, and even the new GP-200LT.",
     "description": "Fast reference browser for GP-200 amp models and effects.",
     "searchPlaceholder": "Search amps, effects, tags...",
     "image": "/img/GP200.png",

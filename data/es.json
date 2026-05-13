@@ -2,6 +2,7 @@
   "locale": "es",
   "hero": {
     "title": "Referencia de Tonos Valeton GP-200",
+    "subtitle": "Tambien sirve como guia para GP-100, GP-100VT e incluso la nueva GP-200LT.",
     "description": "Navegador de referencia rápida para modelos de amplificadores y efectos de la GP-200.",
     "searchPlaceholder": "Buscar amps, efectos, etiquetas...",
     "image": "/img/GP200.png",

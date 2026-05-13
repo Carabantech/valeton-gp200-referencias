@@ -33,6 +33,7 @@ export type ValetonContent = {
   locale: Locale;
   hero: {
     title: string;
+    subtitle?: string;
     description: string;
     searchPlaceholder: string;
     image: string;
