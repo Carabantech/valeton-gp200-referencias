@@ -717,11 +717,125 @@
 <section class="section" id="view">
 
   <div class="card">
+    <div class="category">Firmware Update Guide</div>
+    <h3>How to Update the Valeton GP-200 Firmware (v1.8.0)</h3>
+    <p class="description">
+      Updating your Valeton GP-200 firmware is a straightforward process that improves performance and adds new features. As of early 2026, the latest available version is <strong>1.8.0</strong>.
+    </p>
+    <div style="margin-top:16px;color:#cbd5e1;font-size:0.97rem;line-height:1.7;">
+      <strong>1. Pre-Update Preparation (Very Important)</strong><br><br>
+      <ul style="margin-left:18px;">
+        <li><strong>Backup your presets:</strong> Before updating, use the editor software on your PC to save your current patches (section "Export Patches").</li>
+        <li><strong>Download the files:</strong> Go to the official <a href="https://www.valeton.net/firmware/" target="_blank" style="color:#38bdf8;">Valeton Firmware</a> page and download the latest firmware version (firmware 1.8.0) and the corresponding editor software version (GP-200 Control) for your operating system (Windows or Mac).</li>
+        <li><strong>Uninstall old versions:</strong> It is recommended to uninstall any previous version of Valeton GP-200 software from your computer.</li>
+      </ul>
+      <br>
+      <strong>2. Update Process</strong><br><br>
+      <ol style="margin-left:18px;">
+        <li><strong>Connection:</strong> Connect the GP-200 pedalboard to your computer using the included USB cable. Make sure to use a direct USB port, without hubs.</li>
+        <li><strong>Install and open:</strong> Install the new editor software you downloaded, if you haven't already, and open it.</li>
+        <li><strong>Start the update:</strong> Within the software, go to the wrench icon (settings) at the top and select "Firmware Update".</li>
+        <li><strong>Select the file:</strong> Browse for the firmware file (.bin) that you downloaded earlier.</li>
+        <li><strong>Update:</strong> Click "Update Now" and wait. <b>Do not disconnect the pedalboard or power off the equipment during this process.</b></li>
+        <li><strong>Completion:</strong> When the software returns to the main interface, the update will be complete. Restart your pedalboard.</li>
+      </ol>
+      <br>
+      <strong>3. What to do if it gets stuck? (Troubleshooting)</strong><br><br>
+      If the unit becomes stuck on the "Firmware Update/Restore" screen, follow these steps indicated in user forums:
+      <ol style="margin-left:18px;">
+        <li>Power off the GP-200.</li>
+        <li>Hold footswitches 1 and 3 simultaneously.</li>
+        <li>Without releasing them, power on the GP-200. It should enter restoration mode.</li>
+        <li>Try performing the update again from the software.</li>
+        <li>If the problem persists, try using another computer or perform the update from a Windows 10/11 computer that hasn't been updated recently, as new security restrictions sometimes block the connection.</li>
+      </ol>
+      <br>
+      <div style="margin-top:18px;">
+        <strong>Video Reference:</strong><br>
+        <a href="https://www.youtube.com/watch?v=uwMvRETUlaw" target="_blank" style="color:#38bdf8;font-weight:bold;">Watch tutorial on YouTube</a>
+      </div>
+    </div>
+  </div>
 
-    <h3>Under construction</h3>
+  <div class="card">
+    <div class="category">IR Loading Guide</div>
+    <h3>How to Load Impulse Responses (IRs) into the Valeton GP-200</h3>
+    <p class="description">
+      Loading Impulse Responses (IRs) into your Valeton GP-200 allows you to get much more realistic guitar cabinet sounds. The process is done completely from the official software.
+    </p>
+    <div style="margin-top:16px;color:#cbd5e1;font-size:0.97rem;line-height:1.7;">
+      <strong>1. File Preparation</strong><br><br>
+      <ul style="margin-left:18px;">
+        <li><strong>Compatible formats:</strong> The GP-200 accepts audio files in .wav format.</li>
+        <li><strong>Automatic resolution:</strong> Valeton software automatically converts the sample rate (44.1kHz to 96kHz) and bits (16 or 24 bits), so you don't need to edit them beforehand.</li>
+        <li><strong>Length:</strong> Supports IRs of up to 1024 samples.</li>
+      </ul>
+      <br>
+      <strong>2. Loading Process from Software</strong><br><br>
+      <ol style="margin-left:18px;">
+        <li><strong>Connection:</strong> Connect the pedalboard to your computer via USB and open the GP-200 Control software.</li>
+        <li><strong>Select the CAB block:</strong> In the effects chain on screen, click on the CAB (Cabinet) block.</li>
+        <li><strong>Open the cabinet list:</strong> Click on the current cabinet name to expand the full list.</li>
+        <li><strong>Go to the user section:</strong> Scroll down in the list until you find empty slots labeled "User CAB" (the pedalboard has space for several user IRs).</li>
+        <li><strong>Import the file:</strong> Click on the folder icon with an arrow (or the "+" / "Import" button) next to an empty slot.</li>
+        <li><strong>Select your IR:</strong> Browse on your computer for the .wav file of the IR you want to use, select it and accept. The IR name will appear in the selected slot.</li>
+      </ol>
+      <br>
+      <strong>3. Recommended Settings After Loading</strong><br><br>
+      Once the IR is loaded in your patch, adjust these parameters in the CAB block to optimize the sound:
+      <ul style="margin-left:18px;">
+        <li><strong>Low Cut:</strong> Set it between 70 Hz and 100 Hz to clean up the "mud" or unnecessary frequencies.</li>
+        <li><strong>High Cut:</strong> Set it between 6.5 kHz and 9 kHz to eliminate excess digital brightness or harshness.</li>
+        <li><strong>Mix / Volume:</strong> Balance the block's volume, as some third-party IRs come with a higher or lower volume than factory ones.</li>
+      </ul>
+      <br>
+      <strong>4. Save Changes</strong><br><br>
+      <ul style="margin-left:18px;">
+        <li>Remember to click the "Save" button in the top right corner of the software to store the IR in that specific preset on your pedalboard.</li>
+      </ul>
+    </div>
+  </div>
 
-    <br>
-
+  <div class="card">
+    <div class="category">NAM Profile Loading Guide</div>
+    <h3>How to Load Neural Amp Modeler (NAM) Profiles into the Valeton GP-200</h3>
+    <p class="description">
+      To load Neural Amp Modeler (NAM) profiles into your Valeton GP-200, you need to have firmware version 1.7.4 or higher installed. The official Valeton software automatically converts .nam files to the pedalboard's internal format (SnapTone).
+    </p>
+    <div style="margin-top:16px;color:#cbd5e1;font-size:0.97rem;line-height:1.7;">
+      <strong>1. Required Preparation</strong><br><br>
+      <ul style="margin-left:18px;">
+        <li><strong>Update everything:</strong> Make sure your GP-200 firmware and computer software (GP-200 Control) are on the latest version (firmware 1.7.4 or higher). If the versions don't match, the NAM option won't appear.</li>
+        <li><strong>Download your profiles:</strong> Get your .nam files from community platforms like <a href="https://www.tonehunt.org/" target="_blank" style="color:#38bdf8;">ToneHunt</a> or similar repositories.</li>
+      </ul>
+      <br>
+      <strong>2. Steps to Import NAM Files</strong><br><br>
+      <ol style="margin-left:18px;">
+        <li><strong>Connection:</strong> Connect the pedalboard to your PC/Mac via USB and open the GP-200 Control program.</li>
+        <li><strong>Select the Target Block:</strong> NAM files can be loaded in two different locations depending on what they emulate:
+          <ul style="margin-left:18px;margin-top:8px;">
+            <li><strong>AMP Block:</strong> If it's a capture of an amplifier (head or combo).</li>
+            <li><strong>DIST Block (Effects):</strong> If it's a capture of an overdrive or distortion pedal.</li>
+          </ul>
+        </li>
+        <li><strong>Find Empty Slots:</strong> Click on the name of the current amplifier or pedal to open the dropdown list. Scroll to the end of the list until you find the section labeled "SnapTone" or "NAM".</li>
+        <li><strong>Import:</strong> Right-click on an empty slot (User Slot) and select the "Import NAM file" option (or click on the folder icon).</li>
+        <li><strong>Conversion:</strong> Select the .nam file on your computer. The software will take about 20 seconds to process and convert the file to the pedalboard's format.</li>
+        <li><strong>Save:</strong> Remember to press "Save" in the top right corner of the program to store the preset.</li>
+      </ol>
+      <br>
+      <strong>3. Considerations and Common Errors</strong><br><br>
+      <ul style="margin-left:18px;">
+        <li><strong>Error "Incorrect File Type":</strong> This error occurs if you try to load a .nam file within the impulse response (IR) section or general presets. Make sure you're within the model list of the AMP or DIST blocks.</li>
+        <li><strong>Add a CAB / IR Block:</strong> Most NAM captures from the internet are "Amp Only" (just the head). For it to sound good and not be harsh, you must activate the CAB block or place an IR right after the AMP block in your effects chain.</li>
+        <li><strong>Software freezes during conversion:</strong> If the software freezes while processing the NAM file, close the program, right-click on the GP-200 Control icon on your computer and select "Run as Administrator".</li>
+      </ul>
+      <br>
+      <div style="margin-top:18px;">
+        <strong>Video Reference:</strong><br>
+        <a href="https://www.youtube.com/watch?v=bivNdzD0QpM" target="_blank" style="color:#38bdf8;font-weight:bold;">Watch tutorial on YouTube - GP-200 Firmware 1.7.4 Update & Neural Amp Modeler</a>
+      </div>
+    </div>
   </div>
 
 </section>
